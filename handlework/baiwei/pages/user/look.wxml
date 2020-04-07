@@ -1,0 +1,11 @@
+
+<view class="container">
+  <view bindtap="look" class="help cont-box b-f" wx:for="{{list}}" wx:key="this" data-id="{{item.help_id}}" wx:if="{{list.length}}">
+    <view>
+      <text class="p">{{item.content}}</text>
+    </view>
+  </view>
+  <view wx:if="{{!list.length}}" style="margin-top:200rpx;font-size:30rpx;color:#ccc;text-align:center;">
+  暂无分销及积分...
+  </view>
+</view>

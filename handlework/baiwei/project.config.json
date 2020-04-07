@@ -1,0 +1,278 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.3",
+	"appid": "wx79a5a743cce4db4f",
+	"projectname": "qianzi",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "referee_id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/dealer/index/index",
+					"pathName": "pages/dealer/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vip/vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vip/vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/index",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vip/vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vip/vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/detail",
+					"pathName": "pages/order/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vip/vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/detail",
+					"pathName": "pages/order/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vip/vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/more/more",
+					"pathName": "pages/more/more",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/dealer/index/index",
+					"pathName": "pages/dealer/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/category/index",
+					"pathName": "pages/category/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/flow/index",
+					"pathName": "pages/flow/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/msg/msg",
+					"pathName": "speak/msg/msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/man/man",
+					"pathName": "speak/man/man",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/new/new",
+					"pathName": "speak/new/new",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/new/new",
+					"pathName": "speak/new/new",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/managenormalusesentence/managenormalusesentence",
+					"pathName": "speak/managenormalusesentence/managenormalusesentence",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/man/man",
+					"pathName": "speak/man/man",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/man/man",
+					"pathName": "speak/man/man",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/man/man",
+					"pathName": "speak/man/man",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/man/man",
+					"pathName": "speak/man/man",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/msg/msg",
+					"pathName": "speak/msg/msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/man/man",
+					"pathName": "speak/man/man",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/new/new",
+					"pathName": "speak/new/new",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "speak/managenormalusesentence/managenormalusesentence",
+					"pathName": "speak/managenormalusesentence/managenormalusesentence",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/dealer/goods/goods",
+					"pathName": "pages/dealer/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/look",
+					"pathName": "pages/user/look",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/dealer/team/team",
+					"pathName": "pages/dealer/team/team",
+					"scene": null
+				}
+			]
+		}
+	}
+}

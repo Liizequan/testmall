@@ -1,0 +1,17 @@
+<view style="height:{{scrollHeight}}px;overflow:scroll;">
+  <view class="item" wx:for="{{normalList}}" wx:key="index">
+    <view class="itemdetail">{{item.info}}</view>
+    <view class="itembtns">
+      <view class="bb up" wx:if="{{index!=0}}" bindtap="moveup" data-id="{{item.id}}">
+        <image src="/speak/imgs/up.png"></image>上移
+      </view>
+      <view class="bb" bindtap="del" data-id="{{item.id}}">
+        <image src="/speak/imgs/rubish.png"></image>删除
+      </view>
+      <view class="bb bbr" bindtap="edit" data-id="{{item.id}}">
+        <image src="/speak/imgs/edit.png"></image>编辑
+      </view>
+    </view>
+  </view>
+</view>
+<view class="btn" bindtap="back">完成</view>

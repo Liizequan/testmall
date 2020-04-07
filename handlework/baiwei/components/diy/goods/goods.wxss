@@ -1,0 +1,113 @@
+/* common.wxss */
+@import "/utils/common.wxss";
+
+/* 商品组 */
+
+.diy-goods .goods-list {
+  padding: 4rpx;
+  box-sizing: border-box;
+}
+.goods-item {
+  position:relative;
+}
+.diy-goods .goods-list .goods-item {
+  box-sizing: border-box;
+  padding: 6rpx;
+
+}
+.vip_banner{
+  position:absolute;
+  bottom:0;
+  left:0;
+  height: 70rpx;
+  background: red;
+  z-index: 1;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  align-items: center;
+  color:#fff;
+}
+.vip_banner text{
+  font-size: 44rpx;
+}
+.diy-goods .goods-list.display__slide {
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.diy-goods .goods-list.display__slide .goods-item {
+  display: inline-block;
+}
+
+.diy-goods .goods-list.display__list .goods-item {
+  float: left;
+}
+
+.diy-goods .goods-list.column__2 .goods-item {
+width: 50%;
+
+}
+.diy-goods .goods-list.column__2 .goods-item:nth-child(2n){
+  float: right;
+}
+
+.goods-image{
+  position:relative;
+}
+.diy-goods .goods-list.column__2 .goods-image image {
+  width: 359rpx;
+  height: 349rpx;
+}
+
+.diy-goods .goods-list.column__3 .goods-item {
+  width: 33.33333%;
+}
+
+.diy-goods .goods-list.column__3 .goods-image image {
+  width: 235.3rpx;
+  height: 235.3rpx;
+}
+
+.diy-goods .goods-list .goods-item .goods-image {
+  background: #fff;
+}
+
+.diy-goods .goods-list .goods-item .goods-image image {
+  display: block;
+  width: 100%;
+  border: 1px solid #f5f5f5;
+}
+
+.diy-goods .goods-list .goods-item .detail {
+  padding: 8rpx;
+  background: #fff;
+}
+
+.diy-goods .goods-list .goods-item .detail .goods-name {
+  height: 80rpx;
+  white-space: normal;
+}
+
+.goods_jianjie{
+   color: gray;
+   font-size: 25rpx;
+   margin-bottom: 10rpx;
+}
+
+.sell{
+  color: gray;
+  float: right;
+  font-size: 25rpx;
+}
+
+.goods-price{
+  margin-top:20rpx; 
+}
+.goods-image{
+  width:363rpx;
+  height: 352rpx;
+  background-origin: center center;
+  background-size: cover !important;
+}

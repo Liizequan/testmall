@@ -1,0 +1,22 @@
+<image src="/images/forever.gif" class="banner" bindtap="toVip"></image>
+<view class="search_line">
+  <view class="search_con">
+    <text class="iconfont icon-sousuo"></text>
+    <input placeholder="搜索商品" confirm-type="search" type="text" bindconfirm="search"></input>
+  </view>
+</view>
+<scroll-view class="list" scroll-y bindscrolltolower="scrolltolower" style="{{'height:'+scrollHeight+'px;'}}">
+  <view class="item" wx:for="{{goodsList}}" wx:key="index" bindtap="toDetail" data-id="{{item.goods_id}}" data-price="{{item.member_price}}">
+    <!-- <image src="{{item.image[0].file_path}}"></image> -->
+    <view class="img_con" style="background-image:url('{{item.image[0].file_path}}')">
+        <!-- <image src="{{item.image[0].file_path}}"></image> -->
+    </view>
+    <view class="title">{{item.goods_name}}</view>
+    <!-- <view class="title">{{item.goods_jianjie}}</view> -->
+    <view class="resource">{{item.goods_max_price}}</view>
+    <view class="price_line">
+      <view class="price">会员价 ￥{{item.member_price}}</view>
+      <view class="already">已售 {{item.goods_sales}}件</view>
+    </view>
+  </view>
+</scroll-view>

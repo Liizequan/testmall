@@ -1,0 +1,50 @@
+<view class="container m-b5">
+  <view class="goods-detail-box">
+    <view class="header f-28 col-3">
+      <view catchtap="bindHeaderTap" class="{{dataType==='10'?'active':''}}" data-type="10">
+        <text>全部礼品</text>
+      </view>
+      <view bindtap="bindHeaderTap" class="{{dataType==='20'?'active':''}}" data-type="20">
+        <text>我可兑换</text>
+      </view>
+
+
+ 
+    </view>
+    <scroll-view scroll-y="{{true}}">
+      <view class="wrapper" wx:if="{{list.length}}">
+        <!-- <view wx:if="{{list.length}}"> -->
+        <view class="m-top20" wx:for="{{list}}" wx:key="this" >
+
+          <view class="order-box order-img_list">
+            <view class="order-shop">
+              <view class="order-list-box dis-flex" data-goods_id="{{item.goods_id}}" bindtap="exchange">
+                <view class="left">
+                  <view class="dis-flex">
+                    <view class="order-shop-left">
+                      <image src="{{item.goods_image}}"></image>
+                    </view>
+              
+                    <view class="order-shop-right" style="margin-left:10px;width:100%;display: flex;justify-content: space-between;flex-direction: column;">
+                         <view style="font-size:30rpx">{{item.goods_name}}</view>
+                         <view style="color:gray;font-size:26rpx">
+                         <text style="float:left">兑换积分：<text style="color:#ed2727;font-size:36rpx">{{item.goods_jifen}}</text> </text>
+                         <text style="float:right">已兑换：{{item.sales_initial}}</text>
+                         </view>
+                    </view>
+
+                  </view>
+                </view>
+         
+              </view>
+            </view>
+          </view>
+  
+        </view>
+      </view>
+      <view wx:else style="color:#ccc;text-align:center;margin-top:200rpx;font-size:30rpx;">
+        暂无礼品可兑换...
+      </view>
+    </scroll-view>
+  </view>
+</view>

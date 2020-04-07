@@ -1,0 +1,42 @@
+<!-- 视频组 -->
+<view class="diy-video" style="width:100%;height:590rpx" wx:if='{{btn}}'>
+
+<view class="content">
+<view  class="zan-noticebar" style="color:#000000;background-color: #ffffff; padding: 10px 0px;">
+  
+  <view class="title_box">
+  <view class="left">限时抢购</view>
+    <view class="right">
+    
+     <view>{{h}}</view>
+     <view style="width:30rpx;background:none;color:#ed2727">:</view>
+     <view>{{m}}</view>
+     <view style="width:30rpx;background:none;color:#ed2727">:</view>
+     <view>{{s}}</view>
+
+    </view>
+
+    </view>
+    
+</view>
+
+<view class="goods">
+<image src="{{skell.skell_imgae_url}}"></image>
+</view>
+<view class="goods_name">{{skell.goods_name}}</view>
+<view class="goods_price">原价：<text>¥{{skell.sku[0].line_price}}</text></view>
+<view class="goods_buy">
+<view class="left">¥{{skell.sku[0].goods_price}}</view>
+<view class="right"> <text>剩余{{skell.sku[0].stock_num}}件</text> 
+
+
+<navigator wx:if='{{btn}}' url="/pages/goods/index?goods_id={{skell.goods_id}}">马上抢购</navigator> 
+<text wx:if='{{!btn}}' >抢购结束</text> 
+
+
+</view>
+</view>
+</view>
+
+
+</view>
