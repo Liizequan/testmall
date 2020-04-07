@@ -110,6 +110,8 @@ Page({
       disabled: true
     });
 
+    console.log(values,"-0--------------------------------------")
+
     // 数据提交
     App._post_form('user.dealer.apply/submit', values, function() {
       // 获取分销商申请状态
