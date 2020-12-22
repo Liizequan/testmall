@@ -1,0 +1,13 @@
+page{
+  background: #eee;
+}
+.item{
+  background:#fff;
+  margin:20rpx;
+  font-size: 30rpx;
+  padding:10rpx;
+  border-radius: 4rpx;
+}
+.title{
+  font-weight: bold;
+}

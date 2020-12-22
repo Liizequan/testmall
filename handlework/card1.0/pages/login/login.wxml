@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view wx:if="{{canIUse}}">
+    <view class='header'>
+        <image src='../image/tabbar01.png'></image>
+    </view>
+
+    <view class='content'>
+        <view>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+    <!-- <button class='bottom' type='warn' lang="zh_CN" bindtap="bindGetIndex">
+        取消授权
+    </button> -->
+</view>
+
+<view wx:else class='promote'>请升级微信版本</view>
+<!-- 1
+--------------------- 
+作者：醉卧码场君莫笑 
+来源：CSDN 
+原文：https://blog.csdn.net/woqianduo/article/details/81395257 
+版权声明：本文为博主原创文章，转载请附上博文链接！ -->

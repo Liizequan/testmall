@@ -1,0 +1,10 @@
+<view class="container">
+  <view wx:for="{{reqList}}" wx:key="index" class="helpItem" bindtap="toDetail" data-id="{{item.id}}">
+  <view class="imgCon">
+  <image src="{{item.cover}}" class="reqImg" mode="widthFix"></image>
+  </view>
+    
+    <view class="reqTitle">{{item.title}}</view>
+    <view class="reqDetail">{{item.desc}}</view>
+  </view>
+</view>

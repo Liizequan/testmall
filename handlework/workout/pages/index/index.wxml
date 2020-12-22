@@ -1,0 +1,57 @@
+<view class="search">
+  <image class="loca" src="/assets/icon/location1.png" mode="widthFix" bindtap="toLocat"></image>
+  <view class="location" bindtap="toLocat">{{location}}</view>
+  <view class="condition">
+    <image src="/assets/icon/search1.png"></image>
+    <input placeholder="搜索公司/职位" placeholder-class="searchPH" disabled bindtap="toSearch"></input>
+  </view>
+</view>
+<swiper indicator-dots="true" autoplay="true" interval="{{2000}}" duration="{{800}}" style="height:320rpx;" indicator-active-color="#fff" circular="{{true}}" indicator-color="rgba(255,255,255,0.5)">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index" style="height:320rpx;">
+    <image src="{{item.img}}" class="banner" mode="widthFix"></image>
+  </swiper-item>
+</swiper>
+<view class="underBanner">
+  <view class="hot">
+    <view class="itemTitle">
+      <text>热门企业</text>
+    </view>
+    <view class="items">
+      <text wx:for="{{hotItems}}" wx:key="index" bindtap="toIntrod" data-id="{{item.id}}">{{item.name}}</text>
+    </view>
+  </view>
+
+</view>
+<!-- <selTab></selTab> -->
+<view>
+  <view class="recommend">
+    <view class="itemTitle">
+      <text>推荐职位</text>
+    </view>
+  </view>
+  <item wx:for="{{positions}}" wx:key="index" bindtap="toPosiDetl" class="{{index==0?'':'posiItem'}}" positions="{{positions[index]}}" data-id="{{positions[index].id}}"></item>
+  <view class="moreContain" bindtap="toPosi">
+    <view class="more">
+      <view>查看更多
+       <!-- style="position:relative;left:-5%;" -->
+        <image src="/assets/icon/more.png"></image>
+      </view>
+      <!-- <view class="arrow">
+          <view class="one"></view>
+          <view class="two"></view>
+        </view> -->
+    </view>
+  </view>
+</view>
+<view class="container">
+  <view class="itemTitle">
+    <text>求职助手</text>
+  </view>
+  <view wx:for="{{reqList}}" wx:key="index" class="helpItem" bindtap="toHelp">
+    <view class="imgContain">
+      <image class="reqImg" src="{{item.cover}}" mode="widthFix"></image>
+    </view>
+    <view class="reqTitle">{{item.title}}</view>
+    <view class="reqDetail">{{item.desc}}</view>
+  </view>
+</view>

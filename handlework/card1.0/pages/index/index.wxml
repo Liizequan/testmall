@@ -1,0 +1,135 @@
+<!-- 头部 -->
+<view wx-if="{{login}}">
+  <view class='header'>
+    <view class='header-container'>
+      <view class='mine-top'>
+        <view class='user-logo'><image src='{{userLogo}}'></image></view>
+        <view class='user-title'>
+          <view class='title-view'>{{useCard.title}}</view>
+          <view>{{useCard.professional}}<text>|</text>{{useCard.professional2}}</view>
+        </view>
+        <view class='auto-icon' bindtap='callPhone'>
+          <image src='../image/index/phone.png'></image>
+          <view>手机</view>
+        </view>
+        <view class='auto-icon' bindtap='ecShopTap'>
+          <image src='../image/index/product.png'></image>
+          <view>商城</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 我的名片 -->
+  <view class='mycard'>
+    <view class='mycard-top' bindtap='cardTap'>
+      <view class='card-img'><image src='{{userLogo}}'></image></view>
+      <view class='card-info'>  
+        <view class='info-name'><text>{{useCard.name}}</text>{{useCard.station}}</view>
+        <view class='info-compony'>
+          <image src='../image/index/compony.png'></image>
+          {{useCard.userHeadOffice}}
+        </view>
+        <view class='info-experience'>{{useCard.introduce}}</view>
+      </view>
+    </view>
+    <!-- 联系方式 -->
+    <view class='mycard-centen'>
+      <view class='relation'>联系方式：</view>
+      <view class='relation-info'>
+        <view>
+          电话： 
+          <text>{{userPhone}}</text>
+          <button type='warn' plain='true' bindtap='callPhone'>拨打</button>
+        </view>
+        <view>
+          邮箱： 
+          <text>{{useCard.email}}</text>
+          <button type='warn' plain='true' value='邮箱' bindtap='copyEmail'>复制</button>
+        </view>
+        <view>
+          公司： 
+          <text>{{useCard.userHeadOffice}}</text>
+          <button type='warn' plain='true' value='公司' bindtap='copyCompony'>复制</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 今日头条 -->
+  <view class='news'>
+    <view class='news-container'>
+      <view class='news-title'>
+        <view>{{title.title1}} </view><text>{{useNewsDataTime}}</text>
+      </view>
+      <view class='news-item'>
+        <view class='news-list' wx:for="{{useNewsData}}" wx:key="index">
+          <view class='list-title'>{{item.title}}</view>
+          <view class='list-describe'> <rich-text nodes="{{item.introduction}}"></rich-text></view>
+          <view class='list-tap' data-index='{{item.id}}' bindtap='productDefault'><text>作者：{{item.author}}</text> <image src='../image/index/right.png' mode='widthFix'></image> </view>
+        </view>
+      </view>
+      <view class='news-economic'>
+  
+        <block wx:for="{{economicList}}" wx:key="index" >
+          <view class='economic-list' data-index="{{item.id}}" bindtap='productDefault'>
+            <view></view><text>{{item.title}}</text>
+          </view>
+        </block>
+        
+      </view>
+    </view>
+  </view>
+
+  <!-- 精品推荐 -->
+  <view class='fine'>
+    <view class='fine-container'>
+      <view class='news-title'>
+        <view>{{title.title2}}</view>
+      </view> 
+      <view class='fine-user' wx:for="{{useFineData}}" wx:key="index">
+        <view class='user-name'>
+          {{item.name}}
+          <text style='display:flex;align-self:center;border-radius:8rpx;'>推荐</text>
+          <text style='display:flex;align-self:center;border-radius:8rpx;'>{{item.mode_label}}</text>
+        </view>
+        <view class='user-info'>
+          <view class='info-list'>
+            {{item.qixian}}
+            <view>{{item.term}}{{item.m}}</view>
+          </view>
+          <view class='info-list'>
+            {{item.lixi}}
+            <view>{{item.mode}}</view>
+          </view>
+          <view class='info-list'>
+            {{item.qitou}}
+            <view>{{item.t}}{{item.amount}}{{item.qi}}</view>
+          </view>
+          <view class='info-list'>
+            {{item.lilv}}
+            <view bindtap='orderTap' data-index='{{item.id}}'><button type='warn' size='mini'>查看</button></view>
+          </view>
+        </view>
+        <view class='fint-line'>
+          <view style='width:{{(item.quota)/1000 * 100}}%;'></view>
+        </view>
+        <view class='fint-surplus'>
+          <text>{{item.edu}}</text> <text>{{item.quota}}{{item.w}}</text> 
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 尾部 -->
+  <view class='footer'>
+    <view class='footer-container'>
+      <view> <text class='big'></text><text></text><text></text> </view>
+      <view class='compony'>浮点科技提供技术支持</view>
+      <view> <text></text><text></text><text class='big'></text> </view>
+    </view>
+    <view class='footer-btn' bindtap='newWx'>
+      <button bindtap='newWX' plain="true" size='mini' type='warn'>做一样的小程序</button>
+    </view>
+  </view>
+</view>

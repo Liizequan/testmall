@@ -1,0 +1,74 @@
+<view class="selContain">
+  <view class="parent">
+    <view class="{{['item',selWhat==0?'tabSel':'']}}" bindtap="showMask" data-index="{{0}}">
+      <text>综合</text>
+      <view class="{{selWhat==0?'triRotate':''}}"></view>
+    </view>
+    <view class="{{['item',selWhat==1?'tabSel':'']}}" bindtap="showMask" data-index="{{1}}">
+      <text>上班地点</text>
+      <view class="{{selWhat==1?'triRotate':''}}"></view>
+    </view>
+    <view class="{{['item',selWhat==2?'tabSel':'']}}" bindtap="showMask" data-index="{{2}}">
+      <text>发布时间</text>
+      <view class="{{selWhat==2?'triRotate':''}}"></view>
+    </view>
+    <view class="{{['item',selWhat==3?'tabSel':'']}}" bindtap="showMask" data-index="{{3}}">
+      <text>薪资</text>
+      <view class="{{selWhat==3?'triRotate':''}}"></view>
+    </view>
+  </view>
+  <view class="mask">
+    <view class="firstItem" wx:if="{{selWhat==0}}">
+      <view wx:for="{{hooks}}" wx:key="index" bindtap="choosHook" data-index="{{index}}">
+        <view>{{item.name}}</view>
+        <view class="hook" wx:if="{{hookIndex==index}}">
+        <image src="/assets/icon/hook.png" style="width:30rpx;height:28rpx;"></image>
+        </view>
+      </view>
+      <text class="firstConf" bindtap="confirm">确定</text>
+    </view>
+    <view class="secItem" wx:if="{{selWhat==1}}">
+      <view class="current">
+        <text class="allSel">{{location?location:'城市'}}</text>
+        <view class="change" bindtap="changeLocat">
+          <image src="/assets/icon/change1.png"></image>
+          <text class="chanText">切换城市</text>
+        </view>
+      </view>
+      <view class="allBtns">
+        <view class="{{allSel==index?'allSel':'allNot'}}" bindtap="chAll" data-index="{{index}}" wx:for="{{alls}}" wx:key="index">{{item}}</view>
+      </view>
+      <view class="area">
+        <text wx:for="{{region}}" wx:key="index" class="{{areaSel==index?'allSel':'allNot'}}" bindtap="areaChange" data-index="{{index}}">{{item.name}}</text>
+        <text></text><text></text>
+      </view>
+      <view class="thirdConf" bindtap="confirm">确定</view>
+    </view>
+    <view class="thirdItem" wx:if="{{selWhat==2}}">
+      <view class="btns">
+        <text class="{{btnsIndex==index?'atMe':'notMe'}}" wx:for="{{dates}}" wx:key="index" data-index="{{index}}" bindtap="dateChange">{{item}}</text>
+      </view>
+      <text class="thirdConf" bindtap="confirm">确定</text>
+    </view>
+    <view class="forItem" wx:if="{{selWhat==3}}">
+      <view>月薪范围</view>
+      <view class="range">
+        <text wx:for="{{cashList}}" wx:key="index" class="{{rangeSel==index?'rangeSel':'rangeNot'}}" bindtap="rangeChange" data-index="{{index}}">{{item}}</text>
+        <text></text><text></text>
+      </view>
+      <view class="self">自定义</view>
+      <view class="bySelf">
+        <input placeholder="" bindfocus="define" value="{{minSal}}" bindinput="minInp" type="number"></input>
+        <text class="line">-</text>
+        <input placeholder="" bindfocus="rangeSel" bindinput="maxInp" type="number" value="{{maxSal}}"></input>
+      </view>
+      <view class="thirdConf" bindtap="confirm">确定</view>
+    </view>
+  </view>
+</view>
+<view class="{{(selWhat==0||selWhat)?'theMask':''}}" catchtap="closeMask" style="{{(selWhat==0||selWhat)?('height:'+maskH+'px;margin-top:96rpx;'):''}}"></view>
+<view style="{{'height:'+maskH+'px;position:fixed;top:96rpx;left:0;width:100%;'}}" wx:if="{{list.length==0}}">
+<!-- wx:if="{{selWhat==null&&!iShow}}" -->
+<view style="text-align:center;position:absolute;width:100%;top:50%;transform:translateY(-50%);color:#999;">
+搜索不到职位</view>
+</view>

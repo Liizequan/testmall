@@ -1,0 +1,218 @@
+/*<!--全局修改element样式-->*/
+
+/*定义input为圆角搜索框*/
+.header .el-header input.el-input__inner,
+/* .notice .top input.el-input__inner, */
+.chat input.el-input__inner
+{
+  border-radius: 30px;
+}
+
+/* 左侧导航 */
+.navs .nav .el-menu-item-group__title{
+  padding:0;
+}
+
+/* 首页表格 */
+
+.el-table .cell{
+  height: 23px;
+  line-height: 23px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+}
+
+/* 首页日历 */
+
+.index .index-container .el-calendar__header{
+  position: absolute;
+  top: 6px;
+  right: 70px;
+  border:none;
+}
+.index .index-container .el-calendar-table .el-calendar-day{
+  height: 31px;
+  line-height: 31px;
+  padding:0;
+}
+.index .index-container .el-calendar__body{
+  text-align: center;
+  padding:0;
+}
+.index .index-container .el-calendar__title{
+  color: #330011;
+}
+.index .index-container .el-button-group>.el-button{
+  padding:9px;
+  margin-left: 10px;
+}
+.index .index-container .el-calendar-table td.is-selected{
+  background-color: transparent;
+}
+
+.chat .el-collapse-item__header{
+  font-size: 15px;
+  font-weight: bold;
+}
+.chat .el-collapse-item__content{
+  padding-bottom:10px;
+}
+
+/* 日历 */
+.calendar .calendar-container .el-calendar__header {
+  padding:0 0px 30px;
+  /* display: none; */
+}
+.calendar .calendar-container .el-calendar__header .el-button-group>.el-button{
+  /* display: none; */
+}
+.calendar .calendar-container .el-calendar__header .el-button-group>.el-button:first-child,
+.calendar .calendar-container .el-calendar__header .el-button-group>.el-button:last-child{
+  display: block;
+}
+.calendar .calendar-container .el-calendar__body{
+  padding:0;
+}
+
+/* 公告栏 */
+.notice .el-table th,
+.notice .el-table td,
+.email .el-table th,
+.email .el-table td{
+  text-align: center;
+}
+/* 分页样式 */
+.notice .btn-prev span, 
+.notice .btn-next span,
+.email .btn-prev span, 
+.email .btn-next span,
+.staff .btn-prev span, 
+.staff .btn-next span,
+.relation .btn-prev span,
+.relation .btn-next span{
+  padding:1px 10px;
+}
+.notice .notice-add .el-input,
+.notice .notice-add .el-textarea,
+.notice .notice-add input.el-input__inner,
+.notice .notice-add textarea.el-textarea__inner,
+.memorial .notice-add .el-input,
+.memorial .notice-add .el-textarea,
+.memorial .notice-add input.el-input__inner,
+.memorial .notice-add textarea.el-textarea__inner
+{
+  width:600px;
+}
+.notice .notice-add textarea.el-textarea__inner,
+.memorial .notice-add textarea.el-textarea__inner{
+  max-height: 410px;
+}
+
+/* 邮箱 */
+.email .notice-add .left .el-input__inner{
+  width:262px;
+  border:1px solid #303133;
+}
+.email .notice-add .el-collapse{
+  border:0;
+}
+.email .notice-add .el-collapse-item__header{
+  height: 30px;
+  line-height: 30px;
+}
+.email .notice-add .el-collapse-item__content{
+  padding-bottom: 10px;
+}
+
+
+/* 弹框 */
+.el-dialog__header {
+  padding: 15px 20px 15px;
+  background-color: #303133;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+.el-dialog__title {
+  line-height: 24px;
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+}
+
+
+/* 树形图 */
+/* .el-tree-node{
+  margin: 4px;
+  border:1px solid #ddd;
+} */
+
+.is-focusable{
+  /* margin: 4px;
+  border:1px solid #ddd; */
+}
+.el-tree-node__content{
+  /* margin:5px 0; */
+  /* padding:5px 0; */
+  border-top:1px solid #ddd;
+  /* height: 100%; */
+  height: 60px;
+  line-height: 60px;
+  /* background-color: orange; */
+}
+
+/* 组件关联客户的按钮 */
+.component-add-user .el-button:hover,
+.customer-add-user  .el-button:hover{
+  background-color: transparent;
+}
+
+
+/* 树形 */
+/* 关联客户的单选按钮 */
+/* .customer-user .el-radio-button__inner,.customer-user  .el-radio-button:first-child .el-radio-button__inner{
+  border:0;
+} */
+
+
+/* 时间 */
+.el-input__prefix{
+  /* right: 5px;
+  text-align: right; */
+}
+
+
+/* form表单间距 */
+.el-form-item{
+  margin-bottom: 10px;
+}
+
+/* 客户管理表单 */
+.newCustom .el-form-item{
+  margin-bottom: 20px;
+}
+
+/* 客户详情 */
+.cusDetlEdit input{
+  border:0;
+  text-align: center;
+}
+
+/*客户详情 */
+.cusDetl .el-input__inner{
+  height: 38px;
+}
+/* 客户管理弹框 */
+.customMana .el-dialog__body{
+  padding:20px;
+}
+
+/* 客户手风琴 */
+.customer-container .el-collapse-item__header{
+  height: 36px;
+  line-height: 36px;
+}

@@ -1,0 +1,24 @@
+<!-- <view class="container">
+  <view class="help cont-box b-f" wx:for="{{list}}" wx:key="this">
+    <view>
+      <text class="h4">{{item.title}}</text>
+    </view>
+    <view>
+      <text class="p">{{item.content}}</text>
+    </view>
+  </view>
+</view> -->
+
+<view class="container">
+  <view bindtap="look" class="help cont-box b-f" wx:for="{{list}}" wx:key="this" data-id="{{item.help_id}}">
+
+    <view>
+      <text class="h4">{{item.title}}</text>
+    </view>
+    <view style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+      <text class="p">{{item.content}}</text>
+    </view>
+
+
+  </view>
+</view>

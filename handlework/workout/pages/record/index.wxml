@@ -1,0 +1,26 @@
+<view class="parent" wx:for="{{resList}}" wx:key="index" bindtap="toDetail" data-id="{{item.work.id}}">
+  <view class="top">
+    <text class="post">{{item.work.name}}</text>
+    <text class="cash">{{item.work.min_salary}}k-{{item.work.max_salary}}k</text>
+  </view>
+  <view class="location">
+    <text>{{item.work.city}}{{item.work.region}}</text>
+    <text>{{item.work.experience}}</text>
+    <text>{{item.work.education}}</text>
+  </view>
+  <view class="detail">
+    <view wx:for="{{item.work.welfare}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="company">
+    <image src="{{item.work.company.logo}}" class="logo" mode="widthFix"></image>
+    <text>{{item.work.company.name}}</text>
+  </view>
+  <view class="state">
+  <view style="color:#0088FF;">{{item.work.on==10?'正在招聘':'停止招聘'}}</view>
+  <!-- <view>已报名</view> -->
+  <view>{{item.create_time}}</view>
+  </view>
+</view>
+<view style="height:100vh;display:flex;align-items:center;justify-content:center;color:#999;" wx:if="{{resList.length==0}}">
+<view class="nothing">您还没有报名记录</view>
+</view>

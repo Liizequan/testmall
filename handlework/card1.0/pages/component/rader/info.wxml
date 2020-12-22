@@ -1,0 +1,64 @@
+<!--pages/component/rader/info.wxml-->
+<view class='tabbar'>
+  <text data-tab='0' class="{{tabbar==0?'tabbar-active':''}}" bindtap='tabTap'>信息编写</text>
+  <text data-tab='1' class="{{tabbar==1?'tabbar-active':''}}" bindtap='tabTap'>我的客户</text>
+</view>
+
+<!-- 消息 -->
+<!-- 当点击到消息时，且有我的客户时，才可以发送消息 -->
+<view class='tabbar-left' wx:if="{{tabbar==0}}">
+  <view wx:if="{{listUser.length!=0}}">
+    <view bindtap='addUser' class='add-user' wx:if="{{!userInfo&&!relaysub}}">新增群发</view>
+    <view class='userInfo' wx:if="{{userInfo}}">
+      <view wx:for="{{client}}" wx:key="{{index}}" data-index="{{index}}">
+        <text>{{item.nickName}}</text>
+        <switch data-index="{{index}}" bindchange="switchange"/>
+      </view>
+      <view class='userInfo-btn'>
+        <button type='warn' style='background:#fff; color:#666; border-radius:0;' bindtap='deleteSubmit'>取消</button>
+        <button type='primary' style='background:#ED2727; color:#fff; border-radius:0;' bindtap='submits'>确定</button>
+      </view>
+    </view>
+    <view class='relay' wx:if="{{!userInfo&&relaysub}}">
+      <form bindsubmit="bindFormSubmit">
+        <view class='relay-sub'>
+          <view>确定群发消息？</view>
+          <text wx:for="{{newClient}}" wx:key="index">{{item.nickName}}</text>
+        </view>
+        <textarea placeholder='请输入您要群发的内容' name="textarea" maxlength='-1'></textarea>
+        <!-- 图片添加 -->
+        <view class='add-after-image'>
+          <block wx:for="{{photo}}" wx:key='index'>
+            <view catchlongtap='deleteImg' data-index="{{index}}" >
+              <image src='{{item}}' mode='aspectFill'></image>
+            </view>
+          </block>
+          <view class='add-img' bindtap='addImg' wx:if='{{photo.length!=9}}' >+</view>
+        </view>
+        <view class='flex qunfa-btn'>
+          <button data-index='0' form-type="submit" style='background:#fff;border-radius:0;color:#999;'>取消</button>
+          <button data-index='1' form-type="submit" style='background:#ED2727;border-radius:0;color:#fff;'>群发</button>
+        </view>
+      </form>
+
+    </view>
+  </view>
+  <view wx:else style='height:200rpx; line-height:200rpx; font-size:30rpx; color:#999; background:#F5F5F5; text-align:center'>暂时没有客户</view>
+</view>
+
+
+<!-- 客户 -->
+<view class='tabbar-right' wx:if="{{tabbar==1}}">
+  <view class='list' wx:for="{{listUser}}" wx:key="index">
+    <view class='list-img'>
+      <image src='{{item.avatarUrl}}' mode='widthFix'></image>
+    </view>
+    <view class='list-user'>
+      <text class='user-name'>{{item.nickName}}</text>
+  
+    </view>
+    <view class='list-time'>
+      {{item.create_time}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "每日分享",
+  "usingComponents": {
+    "uploadImages": "/pages/component/uploadImages/index"
+  }
+}

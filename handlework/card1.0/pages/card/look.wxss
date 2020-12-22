@@ -1,0 +1,101 @@
+/* pages/card/card.wxss */
+.scroll{
+  position: absolute;
+  top:0;
+  height:100vh;
+}
+
+.add-user-logo {
+  height: 80rpx; 
+  text-align:center; 
+  line-height: 80rpx; 
+  width: 80rpx; 
+  border-radius:50%; 
+  z-index:500;
+}
+.add-user-logo view{
+  display: inline-block;
+  height: 80rpx; 
+  line-height: 80rpx; 
+  width: 80rpx; 
+}
+.add-user-logo image{
+  width:65rpx;
+}
+
+.item{
+  width: 90%;
+  height: auto;
+  margin: 50rpx auto 0;
+ 
+}
+
+.item .item-content{
+  width: 100%;
+  height: auto;
+ background: white;
+ margin-top: 25rpx;
+}
+.item .item-content view:first-child image{
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  border-radius: 100%;
+  vertical-align:middle;
+}
+.item .item-time{
+  font-size: 14px;
+  color: rgb(33, 33, 33);
+ 
+}
+
+.item-content .name{
+  font-size: 14px;
+  color: rgb(159, 159, 159);
+   margin-left: 10px;
+ 
+}
+
+.item-content .time{
+    font-size: 14px;
+   color: rgb(159, 159, 159);
+  margin-left: 10px;
+}
+
+.item-content .content{
+     font-size: 14px;
+     color: rgb(211, 67, 67);
+     margin-left: 15px;
+}
+
+
+/* 导航 */
+.tabbar{
+  position: fixed;
+  bottom:0;
+  left:0;
+  display: flex;
+  width:100%;
+  color:#636363;
+  padding:10rpx;
+  font-size: 26rpx;
+  background: #fff;
+  border-top:1px solid #ECECEC;
+  justify-content: space-around;
+}
+.tabbar .tabbar-list{
+  flex:1;
+  text-align: center;
+}
+.tabbar .tabbar-list-img {
+  width:50rpx;
+  height: 60rpx;
+  position: relative;
+  margin:auto;
+}
+.tabbar .tabbar-list-img image{
+  width:50rpx;
+}
+.tabbar .tabbar-list-img image+image{
+  width:60rpx;
+}

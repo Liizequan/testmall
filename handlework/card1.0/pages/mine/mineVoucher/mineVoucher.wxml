@@ -1,0 +1,20 @@
+<!--pages/mine/voucher/voucher.wxml-->
+<view class='voucher'>
+  <view class='item'>
+  <!-- 0未使用  1已使用 -->
+    <block wx:for="{{voucherList}}" wx:key="index">
+      <view class='{{item.status == 0 ?"list":"nolist"}}'>
+        <view class='list-contaienr'>
+          <view class='member'>
+            <view class='member-title'>会员加息券</view>
+            <view>购买{{item.value}}万以上客户皆可使用</view> 
+          </view>
+          <view class='percentage'>
+            <text>{{item.rate}}</text>%
+            <view wx:if="{{item.status == 1}}">已失效</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

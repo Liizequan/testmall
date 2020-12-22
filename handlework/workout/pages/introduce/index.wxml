@@ -1,0 +1,56 @@
+<view>
+  <view class="top container">
+    <view class="name">
+      {{all.name}}
+      <image src="{{all.logo}}"></image>
+    </view>
+    <view class="detail">{{all.financing}} · {{all.number}} · {{all.industry}}</view>
+  </view>
+  <view class="tab">
+    <view class="{{selected==0?'selected':'unselect'}}" bindtap="selTab" data-index="{{0}}">公司信息</view>
+    <view class="{{selected==1?'selected':'unselect'}}" bindtap="selTab" data-index="{{1}}">招聘位置</view>
+  </view>
+  <view wx:if="{{selected==0}}" class="container companyInfo">
+    <scroll-view scroll-x class="scrollView">
+    <view wx:for="{{all.image}}" wx:key="index">
+    <image src="{{item.img}}" mode="widthFix"></image>
+    </view>
+      <!-- <image src="{{item.img}}" mode="widthFix" wx:for="{{all.image}}" wx:key="index"></image> -->
+    </scroll-view>
+    <view class="compInfo">
+      <view class="title">公司信息</view>
+      <view class="compDetail">{{someInfo}}</view>
+      <view class="more" wx:if="{{hasMore}}" bindtap="getMore">查看更多>></view>
+    </view>
+    <view class="compMore">
+      <view class="title">公司地址</view>
+      <view class="detlContain" bindtap="openMap" data-lng="{{all.lng}}" data-lat="{{all.lat}}" data-addr="{{all.address}}">
+        <view class="compDetail">{{all.address}}</view>
+        <view class="rightArrow"></view>
+      </view>
+    </view>
+    <view class="compMore" bindtap="toWeb" data-url="{{all.website}}">
+      <view class="title">公司官网</view>
+      <view class="detlContain">
+        <view class="compDetail">{{all.website}}</view>
+        <view class="rightArrow"></view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="parent" wx:for="{{all.work}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}">
+      <view class="itemTop">
+        <text class="post">{{item.name}}</text>
+        <text class="cash">{{item.min_salary}}k-{{item.max_salary}}k</text>
+      </view>
+      <view class="location">
+        <text>{{item.city}}{{item.region}}</text>
+        <text>{{item.education}}</text>
+        <text>{{item.experience}}</text>
+      </view>
+      <view class="detail">
+        <view wx:for="{{item.welfare}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,254 @@
+
+/* 每日分享 */
+.self{
+  display: flex;
+  align-self: center;
+}
+.flex1{
+  flex:1;
+}
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.between{
+  display: flex;
+  justify-content: space-between;
+}
+.news-item{
+  background:#fff;
+  padding:10rpx 40rpx;
+  margin-bottom: 20rpx;
+  color: #93959A;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+.news-item-top {
+  display: flex;
+  color: #666;
+  justify-content: space-between;
+}
+.news-item-top image{
+  width:44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.news-item-top-img{
+  width:100rpx;
+}
+.news-item-top button{
+  border:none;
+  color: #666;
+  font-size: 24rpx;
+  padding-right: 0;
+  background: transparent;
+}
+button::after{ 
+  border: none; 
+}
+.news-tiem-upload{
+  background: #F7F7F7;
+  padding:20rpx;
+  margin:20rpx 0;
+  border-radius: 10rpx;
+  position:relative;
+}
+/* .news-tiem-upload::before{
+  content: '';
+  position: absolute;
+  border:20rpx solid #F7F7F7;
+  top:0;
+} */
+.news-tiem-upload-img{
+  width:33.3%;
+  height:200rpx;
+  margin:10rpx 0;
+  overflow: hidden;
+  position: relative;
+}
+.news-tiem-upload-img image{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:200rpx;
+  transform: translate(-50%,-50%);
+}
+.news-tiem-look image{
+  width:34rpx;
+  height:30px;
+  padding:10rpx 0 10rpx 10rpx;
+}
+.news-tiem-look .comment{
+  display: flex;
+  flex:1;
+  height:30px;
+  justify-content:flex-end;
+}
+.news-tiem-look .comment .ping{
+  margin:0 20rpx;
+}
+.news-tiem-look .comment view{
+  display:flex;
+  vertical-align:middle;
+  align-self:center;
+  background:#33333A;
+  padding:10rpx 10rpx;
+  border-radius:10rpx;
+  margin-left:10rpx;
+}
+.news-tiem-look .comment view text{
+  height:34rpx;
+  color: #fff;
+}
+.news-tiem-look .comment view image{
+  margin-right:20rpx;
+}
+.news-item-book-text{
+  margin:20rpx 0;
+  
+  border-radius: 10rpx;
+  background: #F7F7F7;
+}
+.news-item-book-text .xin{
+  display: flex;
+  flex-wrap: wrap;
+  padding:20rpx;
+  text-align: justify;
+  border-bottom: 1px solid #ccc;
+}
+.news-item-book-text .xin text{
+  padding:20rpx 15rpx;
+}
+.news-item-book-text .info{
+  display: flex;
+  border-bottom: 0;
+  color: #666;
+  flex-direction: column;
+  padding:10rpx 0 20rpx;
+}
+.news-item-book-text .user-text{
+  padding:6rpx 30rpx;
+}
+.news-item-book-text .user-text text{
+  display: inline-block;
+  padding-right: 20rpx;
+}
+.news-item-book-text img{
+  width:30rpx;
+  vertical-align: middle;
+}
+.news-item-book-text text{
+  line-height: 5rpx;
+  /* padding:10rpx 0rpx 10rpx 20rpx; */
+  color:#5F6DA4;
+}
+
+.share {
+  background: #fff;
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  right: 40rpx;
+  bottom: 60rpx;
+  position: fixed;
+  text-align: center;
+  padding:10rpx;
+}
+.share text{
+  display: block;
+  font-size: 22rpx;
+}
+.share .logo{
+  font-size: 70rpx;
+  font-weight: 500;
+  color: #93959A;
+  height:45rpx;
+  line-height: 35rpx;
+}
+.fixed{
+  position: fixed;
+  bottom:0;
+  left:0;
+  font-size: 24rpx;
+  width:100%;
+  background: #fff;
+  justify-content: space-between;
+  border-top:10rpx solid #f5f5f5;
+  border-bottom:10rpx solid #f5f5f5;
+}
+.fixed .between{
+  padding:0rpx 40rpx;
+  background:#f5f5f5;
+}
+.fixed .between input{
+  flex:1;
+  margin-right:40rpx;
+  padding-left:20rpx;
+  height:70rpx;
+  line-height:83rpx;
+  align-self:center;
+  border-radius:10rpx;
+}
+.fixed button{
+  padding:0 20rpx;
+  margin:0;
+  font-size:26rpx;
+  background-color:#ED2727;
+  color:#fff;
+}
+
+/* 添加分享 */
+.add_share{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+  background: #fff;
+  width:100%;
+  height: 100vh;
+}
+.add_share button{
+  font-size: 30rpx;
+}
+.add_share .textarea{
+  margin:20rpx;
+}
+.add_share textarea{
+  background: #fff;
+  width:100%;
+  height: 300rpx;
+  font-size: 26rpx;
+}
+.add_share .wrap {
+  background: #fff;
+}
+.add-img {
+  background: #fff;
+  padding:20rpx;
+}
+.add-img .news-tiem-upload-img image{
+  margin:0;
+  background: pink;
+}
+
+form input{
+  background: #fff;
+  width:100%;
+  height: 50rpx;
+}
+.chooseimg{
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width:100%;
+}
+.chooseimg button{
+  flex: 1;
+  border-radius:0;
+  
+}
+
+
+
+

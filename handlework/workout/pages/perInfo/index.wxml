@@ -1,0 +1,97 @@
+<view class="conBox" bindtap="getImg">
+  <view class="container">
+    <view class="left">个人头像</view>
+    <view class="right">
+      <image src="{{avatarUrl}}" class="avatar"></image>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox" bindtap="inpPhone" data-inpWho="name">
+  <view class="container">
+    <view class="left">姓名</view>
+    <view class="right">
+      <view>{{name}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container">
+    <view class="left">性别</view>
+    <view class="right">
+      <!-- <view>男</view> -->
+      <picker bindchange="sexChange" value="{{sex.index}}" range="{{sex.array}}" class="forTab">
+        <view class="picker">
+          {{sex.array[sex.index]}}
+        </view>
+      </picker>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox last">
+  <view class="container" bindtap="showDatePk" data-who="bir">
+    <view class="left">出生年月</view>
+    <view class="right">
+      <view>{{birth?birth:''}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="inpPhone" data-inpWho="phone">
+    <view class="left">联系电话</view>
+    <view class="right">
+      <view>{{phone?phone:''}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox" bindtap="inpPhone" data-inpWho="wechat">
+  <view class="container">
+    <view class="left">微信/QQ</view>
+    <view class="right">
+      <view>{{wechat?wechat:''}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox last" bindtap="showDatePk" data-who="work">
+  <view class="container">
+    <view class="left">参加工作时间</view>
+    <view class="right">
+      <view>{{workTime?workTime:''}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="btns">
+  <!-- <view class="delBtn" bindtap="del">删除</view> -->
+  <view bindtap="saveAll" class="saveBtn">保存</view>
+</view>
+<view class="selfPicker" wx:if="{{pickShow}}" bindtap="showDatePk">
+  <view class="canclConf">
+    <text class="cancel" catchtap="cancel">取消</text>
+    <text class="confirm" catchtap="confirm">确定</text>
+  </view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 240px;text-align:center;background:#fff;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px" wx:key="index">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px" wx:key="index">{{item}}月</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="phoneBox" wx:if="{{phShow}}"  bindtap="closePhone">
+  <view class="phoneMain" catchtap="keep">
+    <view class="phTitle">{{inpWho=='name'?'姓名':(inpWho=='phone'?'手机号':'微信/QQ号')}}</view>
+    <view class="inpBox">
+     <input placeholder="{{inpWho=='name'?'请输入姓名':(inpWho=='phone'?'请输入手机号':'请输入微信/QQ号')}}" class="phInput" value="{{inpValue}}" bindinput="inp" maxlength="{{inpWho=='phone'?11:30}}" cursor-spacing="100"></input>
+     <text class="rest" wx:if="{{inpWho=='phone'}}">{{rest}}/11</text>
+    </view>
+    <view class="save" bindtap="saveInp">保存</view>
+    <text class="close" bindtap="closePhone">关闭</text>
+  </view>
+</view>

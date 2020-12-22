@@ -1,0 +1,34 @@
+<!--pages/card/sendrever/index.wxml-->
+<view>
+  <view class='list' wx:for="{{newsList}}" wx:key="index">
+    <!-- 发送人 -->
+    <view class='user-info' data-id="{{item.card_id}}">
+      <image src='{{item.avatarUrl}}' mode='widthFix'></image>
+      <view class='licaishi'>
+        <text class='user-name'>{{item.name}}</text>
+        <text class='user-time'>{{item.create_time}}</text> 
+      </view>
+      <image src='../../image/index/right.png' mode='widthFix' class='right'></image>
+    </view>
+    <view class='user-text'>
+      <!-- 发送内容 -->
+      <view>{{item.content}}</view>
+      <!-- 发送图片 -->
+      <view class='fa-img'>
+        <block wx:for='{{item.image}}' wx:for-item='itemChild' wx:key='index'>
+        <!-- 需要预览图片 -->
+          <view class='lu-image'><image  data-id='{{item.id}}' bindtap='lookImg' src='{{imgHorst+itemChild}}' mode='aspectFill'  data-currenturl='{{imgHorst+itemChild}}'  data-previewurl='{{item.image}}'></image></view>  
+        </block>
+      </view>
+      <!-- 发送时间 -->
+      <view class='my-user-info' data-id="{{item.card_id}}">
+        <block wx:for='{{item.userinfo}}' wx:key='index'>
+          <view class='user'>
+            <image src='{{item.avatarUrl}}' mode='widthFix'></image>
+            <!-- <text class='user-name'>{{item.name}}</text> -->
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

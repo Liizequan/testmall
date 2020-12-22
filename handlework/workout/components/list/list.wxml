@@ -1,0 +1,18 @@
+<view class="parent">
+  <view class="top">
+    <text class="post">{{positions.name}}</text>
+    <text class="cash">{{positions.min_salary}}k-{{positions.max_salary}}k</text>
+  </view>
+  <view class="location">
+    <text>{{positions.city}}{{positions.region}}</text>
+    <text>{{positions.experience}}</text>
+    <text>{{positions.education}}</text>
+  </view>
+  <view class="detail">
+    <view wx:for="{{list}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="company">
+    <image src="{{positions.company.logo}}" class="logo" mode="widthFix"></image>
+    <text>{{positions.company.name}}</text>
+  </view>
+</view>

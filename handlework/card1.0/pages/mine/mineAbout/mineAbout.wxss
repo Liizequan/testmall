@@ -1,0 +1,5 @@
+/* pages/mine/mineAbout/mineAbout.wxss */
+@import "../../../wxParse/wxParse.wxss";
+.about{
+  padding:20rpx;
+}

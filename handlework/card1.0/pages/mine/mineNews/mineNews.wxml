@@ -1,0 +1,25 @@
+<!--pages/mine/mineNews/mineNews.wxml-->
+<view>
+  <view class='list' wx:for="{{newsList}}" wx:key="index">
+    <view class='user-info' bindtap='userCard' data-id="{{item.info.card_id}}">
+      <image src='{{item.info.avatarUrl}}' mode='widthFix'></image>
+      <view class='user-text'> 
+        <text class='user-name'>{{item.info.name}}</text>
+        <text class='user-time'>{{item.create_time}}</text>
+      </view>
+      <image src='../../image/index/right.png' mode='widthFix' class='right'></image>
+    </view>
+    <view class='user-auto'>
+      <!-- <view>{{item.content}}</view>
+      <view style='text-align:center'>{{item.create_time}}</view> -->
+      <text>{{item.info.content}}</text>
+      <!-- {{item.info.image}} -->
+      <view class='my-licaishi-img' wx:if='{{item.info.image!=""}}'>
+        <block wx:for='{{item.info.image}}' wx:key='index' wx:for-item='itemChild'>
+          <!-- <image src='{{itemChild}}' mode='aspectFill'></image> -->
+          <view class='lu-image'><image  data-id='{{item.id}}' bindtap='lookImg' src='{{imgHorst+itemChild}}' mode='aspectFill'  data-currenturl='{{imgHorst+itemChild}}'  data-previewurl='{{item.info.image}}'></image></view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

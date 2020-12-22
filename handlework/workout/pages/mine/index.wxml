@@ -1,0 +1,69 @@
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain class="logBtn" wx:if="{{!logged}}"></button>
+<view class="info" bindtap="toResume" wx:if="{{logged}}">
+  <view class="left">
+    <text class="name">{{info.nickName}}</text>
+    <view class="detail" wx:if="{{aye}}">
+      <text wx:if="{{aye.age}}">{{aye.age}}</text>
+      <text wx:if="{{aye.education}}">|</text>
+      <text wx:if="{{aye.education}}">{{aye.education}}</text>
+      <text wx:if="{{aye.year}}">|</text>
+      <text wx:if="{{aye.year}}">{{aye.year}}</text>
+    </view>
+  </view>
+  <image src="{{info.avatarUrl}}" class="head"></image>
+</view>
+<view class="info" bindtap="toResume" wx:else>
+  <view class="left">
+    <text class="name">未登录</text>
+    <view class="detail">
+      <text>点击头像可登录</text>
+    </view>
+  </view>
+  <image src="/assets/mine/unlog.png" class="head"></image>
+</view>
+<view class="item first" bindtap="toResume">
+  <view class="main">
+    <image class="icon" src="/assets/mine/lineResm.png"></image>
+    <text class="itemName">在线简历</text>
+    <view class="more">
+      <view class="moreIcon"></view>
+    </view>
+  </view>
+</view>
+<view class="item"  bindtap="uploadResm">
+  <view class="main">
+    <image class="icon" src="/assets/mine/pushResm.png"></image>
+    <text class="itemName">上传简历附件</text>
+    <view class="more">
+      <view class="moreIcon"></view>
+    </view>
+  </view>
+</view>
+<view class="item" bindtap="toRecord">
+  <view class="main">
+    <image class="icon" src="/assets/mine/apply.png"></image>
+    <text class="itemName">我的应聘</text>
+    <view class="more">
+      <view class="moreIcon"></view>
+    </view>
+  </view>
+</view>
+<view class="item" bindtap="toStore">
+  <view class="main last">
+    <image class="icon" src="/assets/mine/store.png"></image>
+    <text class="itemName">我的收藏</text>
+    <view class="more">
+      <view class="moreIcon"></view>
+    </view>
+  </view>
+</view>
+<view class="item first" bindtap="toSuggest">
+  <view class="main last">
+    <image class="icon" src="/assets/mine/evaluation.png"></image>
+    <text class="itemName">我的评价</text>
+    <view class="more">
+      <view class="moreIcon"></view>
+    </view>
+  </view>
+</view>
+<view class="logout" bindtap="logout" wx:if="{{logged}}">退出登录</view>

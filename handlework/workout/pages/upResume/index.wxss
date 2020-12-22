@@ -1,0 +1,63 @@
+page {
+  background: rgba(245, 245, 245, 1);
+}
+
+.notice {
+  height: 64rpx;
+  font-size: 20rpx;
+  color: #999;
+  text-align: center;
+  line-height: 64rpx;
+}
+
+.main {
+  background: #fff;
+  margin-bottom:10rpx;
+}
+
+.name {
+  font-size: 32rpx;
+  color: #333;
+  padding: 36rpx;
+  padding-bottom:0;
+  margin-bottom:60rpx;
+  box-sizing: border-box;
+}
+.name view{
+  overflow: hidden;
+}
+.detail {
+  font-size: 24rpx;
+  color: #999;
+  padding: 0 32rpx 44rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload {
+  height: 80rpx;
+  margin:32rpx 20rpx;
+  color: #fff;
+  background: #08f;
+  border-radius: 6rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.ntAgain {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+.limit {
+  font-size: 24rpx;
+  color: #08f;
+  text-align: center;
+}
+.bottom{
+  position:absolute;
+  bottom:40rpx;
+  left:0;
+  width:100%;
+}

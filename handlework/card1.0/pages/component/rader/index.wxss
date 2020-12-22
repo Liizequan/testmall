@@ -1,0 +1,140 @@
+/* pages/component/rader/index.wxss */
+.to-tab{
+  display: flex;
+  justify-content: space-around;
+  font-size: 26rpx;
+  background: #fff;
+}
+.jusitfy{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.to-tab text{
+  display: inline-block;
+  padding:20rpx 0;
+}
+.to-tab .active{
+  border-bottom: 1px solid red;
+}
+.add-user-logo {
+  height: 98rpx; 
+  text-align:center; 
+  line-height:110rpx; 
+  width: 98rpx; 
+  border-radius:50%; 
+  z-index:500;
+}
+.add-user-logo image{
+  width:65rpx;
+}
+
+.item{
+  width: 92%;
+  height: auto;
+  margin: 25rpx auto;
+ 
+}
+
+.item .item-content{
+  width: 100%;
+  height: auto;
+  background: white;
+  margin-top: 25rpx;
+  border-radius: 10rpx;
+  padding:10rpx 0;
+}
+.item .item-content view:first-child image{
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  border-radius: 100%;
+  vertical-align:middle;
+}
+.item .item-time{
+  font-size: 14px;
+  color: rgb(33, 33, 33);
+ 
+}
+
+.item-content .name{
+  font-size: 14px;
+  color: rgb(159, 159, 159);
+   margin-left: 10px;
+ 
+}
+
+.item-content .time{
+    font-size: 14px;
+   color: rgb(159, 159, 159);
+  margin-left: 10px;
+}
+
+.item-content .content{
+     font-size: 14px;
+     color: rgb(211, 67, 67);
+     margin-left: 15px;
+}
+
+/* 行为 */
+.box{
+  margin:20rpx 0;
+  background: #fff;
+}
+.picker{
+  padding:20rpx 40rpx;
+  color:#BD464A;
+  font-weight: 500;
+  font-size: 28rpx;
+  /* background: yellow; */
+  border-bottom: 1px solid #F8F8F8;
+}
+.box-child{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 40rpx;
+}
+.box-child>view{
+  width:48%;
+  display: flex;
+  color:#ADADAD;
+  font-size: 26rpx;
+  padding:20rpx 0;
+}
+.box-child>view:first-child{
+  border-right: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2; 
+}
+.box-child>view:last-child{
+  border-left: 1px solid #F2F2F2;
+  border-top: 1px solid #F2F2F2; 
+}
+.box-child>view text{
+  font-size: 60rpx;
+  font-weight: 600;
+  color: #555;
+}
+.box-child .box-img{
+  display: flex;
+  align-self: center;
+}
+.box-child>view image{
+  width:80rpx;
+  height: 60rpx;
+  padding:0rpx 20rpx;
+}
+.behavior{
+  padding:0 40rpx;
+  background: #fff; 
+  color: #494949;
+  font-size: 28rpx;
+}
+.behavior .list{
+  padding:30rpx 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #F2F2F2;
+}
+.container{
+  margin-bottom: 120rpx;
+}

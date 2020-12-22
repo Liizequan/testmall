@@ -1,0 +1,86 @@
+<view class="container">
+  <view class="iTitle">
+    <text class="what">个人资料</text>
+    <text class="btn" bindtap="editPer">编辑</text>
+  </view>
+  <view class="info">
+    <view class="left">
+      <text class="name">{{all.info.nickName}}</text>
+      <view class="detail" wx:if="{{aye}}">
+        <text wx:if="{{aye.age}}">{{aye.age}}</text>
+        <text wx:if="{{aye.education}}">|</text>
+        <text wx:if="{{aye.education}}">{{aye.education}}</text>
+        <text wx:if="{{aye.year}}">|</text>
+        <text wx:if="{{aye.year}}">{{aye.year}}</text>
+      </view>
+    </view>
+    <image src="{{all.info.avatarUrl}}" class="head"></image>
+  </view>
+  <view class="concat" wx:if="{{all.info.phone}}">联系电话：{{all.info.phone}}</view>
+  <view class="concat" wx:if="{{all.info.wechat}}">微信/QQ：{{all.info.wechat}}</view>
+</view>
+<view class="container">
+  <view class="iTitle">
+    <text class="what">个人评价</text>
+    <text class="btn" bindtap="editEvalu">编辑</text>
+  </view>
+  <view class="person">{{all.content}}</view>
+</view>
+<view class="container">
+  <view class="iTitle">
+    <text class="what">求职意向</text>
+  </view>
+  <view wx:for="{{all.hope}}" wx:key="index}" class="{{['posiItem',(forList.length-1==index)?'noborder':'']}}" bindtap="toIdeaPosi" data-id="{{item.id}}" data-action="view">
+    <view class="lineOne">
+      <view>[{{item.region}}]{{item.name}}</view>
+      <view class="cash">{{item.min_salary}}k-{{item.max_salary}}k</view>
+    </view>
+    <view class="lineTwo">
+      {{item.type==10?'全职':'兼职'}}
+    </view>
+  </view>
+  <view class="itemAdd" bindtap="toAdd" data-action="add">
+    <text class="add">+</text><text>添加职位期望</text>
+  </view>
+</view>
+<view class="container">
+  <view class="iTitle">
+    <text class="what">教育经历</text>
+  </view>
+  <view wx:for="{{all.education}}" wx:key="index}" class="{{['posiItem',(eduList.length-1==index)?'noborder':'']}}" bindtap="viewEduExp" data-id="{{item.id}}" data-action="view">
+    <view class="lineOne">
+      <view>{{item.school}}{{item.chair}}</view>
+      <view class="cash" catchtap="toEduExper" data-id="{{item.id}}" data-action="edit">编辑</view>
+    </view>
+    <view class="lineTwo">
+    <view>{{item.major}}</view>
+      <view>{{item.time}}</view>
+    </view>
+  </view>
+  <view class="itemAdd" bindtap="addEduExper" data-action="add">
+    <text class="add">+</text><text>添加教育经历</text>
+  </view>
+</view>
+<view class="container">
+  <view class="iTitle">
+    <text class="what">工作经验</text>
+  </view>
+  <view wx:for="{{all.experience}}" wx:key="index}" class="{{['posiItem',(experList.length-1==index)?'noborder':'']}}" bindtap="toWorkExper" data-action="view" data-id="{{item.id}}">
+    <view class="lineOne">
+      <view>{{item.company}}{{item.chair}}</view>
+      <view class="cash" catchtap="toWorkExper" data-action="edit" data-id="{{item.id}}">编辑</view>
+    </view>
+    <view class="lineTwo">
+    <view>{{item.work}}</view>
+      <view>{{item.begin_time}}-{{item.end_time}}</view>
+    </view>
+    <view class="lineThr">
+    {{item.content}}</view>
+  </view>
+  <view class="itemAdd" bindtap="toWorkExper" data-action="add">
+    <text class="add">+</text><text>添加工作经验</text>
+  </view>
+</view>
+<view class="newDate">
+简历最新更新时间：{{all.info.time}}
+</view>

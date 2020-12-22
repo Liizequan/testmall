@@ -1,0 +1,50 @@
+<!--pages/index/order/order.wxml-->
+<view class='order'>
+  <view class='header'>
+    <view class='order-top'>
+      <text>名称</text> 
+      <view>{{useorderData.name}}</view>
+    </view>
+    <view class='order-shadow'>
+      <view>{{useorderData.qitou}}<text>{{useorderData.t}}{{useorderData.amount}}{{useorderData.qi}}</text></view>
+      <view>{{useorderData.lilv}}<text>{{useorderData.interest}}{{useorderData.b}}</text></view>
+      <view>{{useorderData.edu}}<text>{{useorderData.t}}{{useorderData.quota}}{{useorderData.w}}</text></view>
+    </view>
+    <view class='order-between'>
+      <view><text>类型：</text><view>{{useorderData.type}}</view></view>
+      <view><text>{{useorderData.qixian}}:</text><view>{{useorderData.term}}{{useorderData.m}}</view></view>
+      <view><text>{{useorderData.lixi}}：</text><view>{{useorderData.mode}}</view></view>
+    </view>
+  </view>
+  
+  <view class='order-between center'>
+    <view><text>管理员</text><view>{{useorderData.manage}}</view></view>
+  </view>
+  <view class='footer'>
+    <text>投向</text><view>{{useorderData.invest}}</view>
+  </view>
+  <view class='order-auto'>
+    <view>其他说明</view>
+    <view class='kuang'>{{useorderData.content}}</view>
+  </view>
+  <view class='btn' bindtap='btnTap'><button type='warn'>预约</button></view>
+</view>
+
+<view class='order-hide' wx:if="{{orderHide}}">
+  <view class='bg' bindtap='closeTap'></view>
+  <view class='order-kuang'>
+    <view class='kuang-center'>
+      <text>预约</text>
+      <view>{{useorderData.userName}}</view>
+    </view>
+    <form bindsubmit="formSubmit">
+      <view class='kuang-input'>
+        <view> <text>姓名</text> <input name="name" bindinput='nameInput' placeholder="请输入您的姓名" ></input></view>
+        <view> <text>电话</text> <input name="phone" bindinput='phoneInput' placeholder="请输入您的电话"></input></view>
+      </view>
+      <view class='submit' >
+        <button type='warn' form-type="submit">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

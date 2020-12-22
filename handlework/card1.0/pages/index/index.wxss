@@ -1,0 +1,302 @@
+/**index.wxss**/
+/* 顶部 */
+page{
+  background-color: #F5F5F5;
+}
+.header{
+  margin-bottom: 90rpx;
+}
+.header-container{
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+.mine-top{
+  padding:10rpx 41rpx;
+  display: flex;
+  color: #333333;
+  font-size: 20rpx;
+  font-weight: 400;
+  justify-content: space-between;
+  box-shadow: 1px 1px #f1f1f1;
+}
+.user-logo {
+  font-size: 24rpx;
+  margin-right: 40rpx;
+}
+.user-logo image{
+  width: 68rpx;
+  height: 68rpx;
+  display: block;
+  border-radius: 50%;
+}
+.user-title {
+  color: #999999;
+  flex: 1;
+  align-self: center;
+}
+.user-title .title-view{
+  color: #333333;
+}
+.user-title text{
+  display: inline-block;
+  padding:0 10rpx;
+  color: #E5E5E5;
+}
+.auto-icon {
+  margin-left: 44rpx;
+}
+.auto-icon image{
+  width:38rpx;
+  height: 38rpx;
+  display: block;
+}
+/* 名片 */
+.mycard-top{
+  display: flex;
+  padding:38rpx 41rpx;
+  flex-direction:row; 
+}
+.card-img image{
+  width:300rpx;
+  height: 300rpx;
+}
+.card-info{
+  color: #999999;
+  font-size: 26rpx;
+  margin-left: 40rpx;
+}
+.info-name {
+  padding:40rpx 0; 
+}
+.info-name text{
+  display: inline-block;
+  padding-right: 10rpx;
+  color: #353535;
+  font-size: 34rpx;
+  font-weight:bold;
+}
+.info-compony {
+  color:#353535;
+  padding:10rpx 0;
+  height:40rpx;
+  overflow:hidden;
+  line-height:40rpx;
+}
+.info-compony image{
+  width: 33rpx;
+  height: 33rpx;
+  margin-right: 10rpx;
+}
+.info-experience{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/* 联系方式 */
+.mycard-centen{
+  padding:0 41rpx 20rpx;
+}
+.relation{
+  color: #353535;
+  font-size: 26rpx;
+}
+.relation-info view{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: row;
+  margin: 20rpx 0;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.relation-info view text{
+  color: #353535;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.relation-info view button{
+  font-size: 22rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+/* 今日头条 精选推荐*/
+.news{
+  padding-top:20rpx;
+}
+
+.mine-top,
+.mycard,
+.news-container,
+.fine-container>view
+{
+  background-color: #fff;
+}
+/* 今日头条*/
+.news-title{
+  color:#353535;
+  font-size: 34rpx;
+  font-weight:bold;
+  padding:41rpx 40rpx;
+  border-bottom:1px solid #E5E5E5;
+}
+.news-title view{
+  display: inline-block;
+  /* padding-left:20rpx; */
+  padding-right: 10rpx;
+  /* border-left: 4rpx solid red; */
+}
+.news-title text{
+  font-weight:400;
+}
+/* 新闻列表 */
+.news-item{
+  padding: 0 40rpx;
+}
+.list-title{
+  padding:40rpx 0;
+  color: #353535;
+  font-size: 30rpx;
+  font-weight:500;
+}
+.list-describe{
+  color: #666666;
+  font-size: 26rpx;
+}
+.list-tap {
+  color: #999999;
+  font-size: 22rpx;
+  display: flex;
+  padding:41rpx 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #E5E5E5;
+}
+.list-tap image{
+  width:14rpx;
+  display: flex;
+  align-self: center;
+}
+/* 新闻li列表 */
+.news-economic{
+  padding:0 41rpx 40rpx;
+  color: #353535;
+  font-size: 30rpx;
+  font-weight:500;
+}
+.economic-list{
+  display:flex;
+  flex-direction: row;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.economic-list view{
+  width:10rpx;
+  height:10rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  align-self: center;
+  background-color: #353535;
+}
+/* 精品推荐 */
+/* .fine-container */
+.fine{
+  margin-top:20rpx;
+}
+.fine-user{
+  padding:40rpx 41rpx;
+  margin-bottom:10rpx;
+}
+.fine-user:last-child{
+   margin-bottom:0rpx;
+}
+.user-name{
+  color: #353535;
+  font-size: 30rpx;
+  font-weight:bold;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.user-name text{
+  display: inline-block;
+  color: #ED2727;
+  font-size: 20rpx;
+  font-weight: 400;
+  border:1px solid #ED2727;
+  padding:3rpx 10rpx;
+  margin-left:20rpx;
+}
+.user-info{
+  display: flex;
+  font-size: 26rpx;
+  color:#888888;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+.user-info>view{
+  padding-top:20rpx;
+}
+.info-list view{
+  color: #353535;
+  padding:10rpx 0;
+}
+.fint-line,.fint-line view{
+  background-color: #E5E5E5;
+  height:6rpx;
+  border-radius:3px;
+}
+.fint-line view{
+  background-color:red;
+}
+.fint-surplus{
+  display: flex;
+  padding-top:20rpx;
+  justify-content: space-between;
+  color: #888888;
+  font-size: 26rpx;
+}
+/* 微信小程序定制 */
+.footer{
+  padding:30rpx 0 60rpx;
+  text-align: center;
+}
+.footer-container{
+  padding:30rpx 0;
+  color:#888888;
+  font-size:20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: centerl;
+}
+.footer-container view{
+  display: flex;
+  flex-direction: row;
+}
+.footer-container .compony{
+  padding:20rpx;
+}
+.footer-container text{
+  width:6rpx;
+  margin:5rpx;
+  height: 6rpx;
+  align-self:center;
+  border-radius: 50%;
+  background-color: #999999;
+}
+.footer-container text.big{
+  width:10rpx;
+  height: 10rpx;
+}
+.footer-btn button{
+  border-radius: 60rpx;
+}

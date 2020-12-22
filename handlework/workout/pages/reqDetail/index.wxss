@@ -1,0 +1,83 @@
+@import "/wxParse/wxParse.wxss";
+
+.reqTitle {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.qrcode {
+  display: flex;
+  margin-top: 72rpx;
+}
+
+.qrcode image {
+  width: 144rpx;
+  height: 144rpx;
+  margin-right: 32rpx;
+}
+
+.codeText {
+  font-size: 28rpx;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.eyeIcon {
+  width: 44rpx;
+  margin-right: 14rpx;
+}
+
+.shareIcon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 14rpx;
+}
+
+.cooperat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 68rpx;
+  margin-bottom: 52rpx;
+}
+
+.cooperat view {
+  display: flex;
+  align-items: center;
+}
+
+.upDown {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 16rpx;
+}
+
+.author {
+  font-size: 24rpx;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  margin-bottom: 56rpx;
+}
+
+.cover {
+  width: 100%;
+}
+
+.shareP {
+  position: relative;
+}
+
+.shareBtn[plain] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+}

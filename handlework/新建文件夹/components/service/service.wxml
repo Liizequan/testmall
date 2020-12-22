@@ -1,0 +1,26 @@
+<!-- <cover-view class="mask" wx:if="{{maskShow}}" bindtap="closeMask">
+  <cover-view class="serCon">
+    <cover-view class="phone" bindtap="call">
+      <cover-view>{{phone}}</cover-view>
+    </cover-view>
+    <cover-view class="phone">
+      <cover-view>客服咨询</cover-view>
+      <button open-type="contact" class="serveBtn btn-normal"></button>
+    </cover-view>
+    <cover-view class="cancel">取消</cover-view>
+  </cover-view>
+</cover-view> -->
+<view class="mask" wx:if="{{maskShow}}" bindtap="closeMask">
+  <view class="serCon">
+    <view class="phone" bindtap="call">
+      <view>{{phone}}</view>
+    </view>
+    <view class="phone">
+     <!-- catchtap="toChat" -->
+      <view style="height: 100%;display: flex;justify-content: center;align-items: center;">立即沟通</view>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="serveBtn btn-normal"></button>
+       <!-- wx:if="{{btnshow}}" -->
+    </view>
+    <view class="cancel">取消</view>
+  </view>
+</view>

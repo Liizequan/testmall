@@ -1,0 +1,32 @@
+<view class="container b-f">
+
+  <!-- 提现明细列表 -->
+  <scroll-view scroll-y="{{ true }}" bindscrolltolower="triggerDownLoad" style="height: {{swiperHeight}}px;">
+    <view class="widget-list" wx:if="{{ list.length }}">
+      <view class="widget__detail dis-flex flex-x-between" wx:for="{{list}}" wx:key="this">
+        <view class="detail__left dis-flex flex-dir-column flex-x-around">
+          <view class="detail__money f-30">{{item.flow_type==10?'收入':'兑换'}} {{item.money}} 积分</view>
+            <view class="detail__time col-9 f-24">{{ item.create_time }}</view>
+        </view>
+        <view class="detail__right dis-flex flex-dir-column flex-x-center flex-y-center">
+     
+          <view wx:if="{{item.flow_type ==20}}" class="detail__status f-28 {{item.type == 10 ? 'col-green' : 'col-m'}}">
+               {{item.type==10?'积分兑换':'商品兑换'}} 
+          </view>
+
+    <view wx:if="{{item.flow_type ==10}}" class="detail__status f-28">
+      积分收入
+          </view>
+    
+        </view>
+      </view>
+      <!-- 没有更多 -->
+      <view  class="no-more f-30">亲, 没有更多了</view>
+    </view>
+    <!-- 没有记录 -->
+    <view class="yoshop-notcont" wx:if="{{ !list.length }}">
+      <text class="iconfont icon-wushuju"></text>
+      <text class="cont">亲，暂无提现记录哦</text>
+    </view>
+  </scroll-view>
+</view>

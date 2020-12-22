@@ -1,0 +1,16 @@
+<view class="notice">提示：您目前已上传{{resList.length}}份简历附件，最多上传2份简历附件</view>
+<view class="main" wx:for="{{resList}}" wx:key="index" bindlongtap="longTap" data-id="{{item.id}}" bindtap="toDetail" data-url="{{item.url}}" data-type="{{item.type}}">
+  <view class="name">
+    <view>{{item.name}}</view>
+  </view>
+  <view class="detail">
+    <view>大小：{{item.size}}M</view>
+    <view>上传时间：{{item.create_time}}</view>
+  </view>
+</view>
+<view class="bottom">
+  <view class="upload" bindtap="upload">上传简历</view>
+  <!-- DOC、DOCX、PDF、 -->
+  <view class="ntAgain">提示：简历附件的支持JPG、PNG图片格式附件</view>
+  <view class="limit">文件大小不超过2M</view>
+</view>

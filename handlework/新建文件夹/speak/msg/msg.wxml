@@ -1,0 +1,12 @@
+<view>
+  <view class="item" wx:for="{{men}}" wx:key="index" bindtap="toTalk" data-fromId="{{item.from}}" data-name="{{item.name}}">
+    <view class="head" style="background:url('{{item.head}}');background-size:cover;background-position:center;overflow:hidden;"></view>
+    <view class="right">
+      <view class="righttop">
+        <view class="{{['who',item.view?'':'reddot']}}">{{item.name}}</view>
+        <view class="date">{{item.create_time}}</view>
+      </view>
+      <view class="rightbottom">{{item.type=='word'?item.last.message:(item.type=='photo'?'[图片]':'[语音]')}}</view>
+    </view>
+  </view>
+</view>

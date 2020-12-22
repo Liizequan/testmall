@@ -1,0 +1,107 @@
+<!--pages/dynamic/dynamic.wxml-->
+<view class='dynamic' bindtap='closefa'>
+  <scroll-view scroll-y style="height: 100vh;" catchscrolltoupper="upper" catchscrolltolower="lower" catchscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <block wx:for="{{useDynamicData}}" wx:key="index">
+      <view class='news-item' data-userId="{{item.user_id}}">
+        <view class='news-item-top'>
+          <view class='self news-item-top-img'><image src='{{horstPublic+item.info.imgurl}}'></image></view>
+          <text class='self flex1'>{{item.info.userHeadOffice}}</text>
+          <view class='self'><button open-type='share'>分享</button></view>
+        </view>
+        <view class='news-tiem-upload'>
+          <text wx:if="{{item.content.length>0?true:false}}" 
+            style="display: -webkit-box;-webkit-box-orient: vertical;overflow: hidden;text-align:justify;-webkit-line-clamp:{{(item.id!=zhangIndex)?'2':'none'}}"
+          >{{item.content}}</text>
+          <view wx:if="{{item.content.length>50}}">
+            <!-- id等于 -->
+            <text data-index='0' data-id="{{item.id}}" bindtap='zhangkai' wx:if="{{(item.id!=zhangIndex)}}" style='color:#5F6DA4; display:inline-block; padding-top:20rpx;'>查看全文</text>
+            <text data-index='1'  data-id="{{item.id}}" bindtap='zhangkai' wx:else style='color:#5F6DA4; display:inline-block; padding-top:20rpx;'>收起</text>
+          </view>
+          <view class=' wrap'>
+            <view class='news-tiem-upload-img' wx:for="{{item.image}}" wx:key='index' wx:if="{{item==null?false:true}}">
+              <image src='{{horst+item}}' mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+        <view class='news-tiem-look'>
+          <view class='between'>
+            <!-- <web-view src="https://www.baidu.com/" wx:if="{{newUrl}}"></web-view>
+            <text class='self' bindtap='lookBook'>查看详情</text> -->
+            <text class='self' wx:if="{{item.user_id===cardId}}" catchtap='deleteList' data-id="{{item.id}}">删除</text>
+            <view class='comment'>
+            <!-- wx:if="{{comment}}"  -->
+              <view class='ping' wx:if="{{item.id==comment?true:false}}">
+                <!-- 点赞 或者取消，对应着每一条信息 -->
+                <!-- <view bindtap='goodTap' data-index="{{item.id}}" wx:if="{{startNo}}"> -->
+                <!-- <view bindtap='goodTap' data-index="{{item.id}}" 
+                  wx:if="{{(item.user_id===item.support[zanid].user_id)?false:true}}"> -->
+                <view catchtap='goodTap' data-index="{{index}}" 
+                  wx:if="{{!item.dianzan}}">
+                  <image src='../image/xin.png' mode='widthFix' class='self'></image>
+                  <text>点赞</text>
+                </view>
+                <!-- <view bindtap='goodDelete' data-index="{{item.id}}" wx:if="{{!startNo}}"> -->
+                <view catchtap='goodDelete' data-index="{{index}}" 
+                  wx:if="{{item.dianzan}}">
+                  <image src='../image/xin.png' mode='widthFix' class='self'></image>
+                  <text>取消</text>
+                </view>
+                <view catchtap='commentTap'>
+                  <image src='../image/info.png' mode='widthFix' class='self'></image>
+                  <text>评论</text>
+                </view>
+              </view>
+              <image src='../image/info_active.png' mode='widthFix' class='self' catchtap='showComment' data-index="{{index}}" data-id="{{item.id}}"></image> 
+            </view>
+          </view>
+
+          <!-- 隐藏点赞评论框 -->
+          <view class='news-item-book-text'>
+            <!-- 点赞区 -->
+            <view class='xin' wx:if="{{item.support.length>0?true:false}}">
+              <image src='../image/xin_active.png' mode='widthFix' class='self'></image>
+              <text wx:for='{{item.support}}' wx:key="index">
+                {{item.nickName}}
+              </text>
+            </view>
+            <!-- 评论区 -->
+            <view class='info' wx:if="{{item.comment.length>0?true:false}}">
+              <!-- <image src='../image/info.png' mode='widthFix' class='self'></image> -->
+              <view  class='user-text' wx:for='{{item.comment}}' wx:key="index" data-index="{{item.user_id}}" catchlongpress="deleteComment" data-id='{{item.id}}'>
+                <text>{{item.nickName}} :</text>{{item.content}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class='share' catchtap='shareText' wx:if="{{licai}}">
+    <text class='logo'>+</text>
+    <text>添加</text>
+  </view>
+  <view class='fixed' wx:if="{{inputValue}}">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class='between'>
+        <input placeholder='快来发表评论' focus="true" class='self' name="input" catchtap='inputTap'></input>
+        <button  form-type="submit">发表</button>   
+      </view>
+    </form>
+  </view>
+  
+  <view class='add_share' wx:if="{{addShare}}" catchtap='think'>
+    <view class='add-img'>
+      <view class='textarea'><textarea placeholder='此刻的想法'  bindinput='thinkTap' maxlength='-1'></textarea></view>
+      <view class='wrap'>
+        <view class='news-tiem-upload-img' wx:for="{{photo}}" wx:key='index' catchlongtap='deleteImg' data-index="{{index}}" >
+          <image src='{{item}}' mode='widthFix'></image>
+        </view>
+      </view>
+      <button wx:if='{{photo.length!=9}}' catchtap='addLogo' size='default' type='warn' style='position:fixed; bottom:80rpx;width:100%;color:#fff;border-radius:0;left:0;'>添加图片</button>
+    </view>
+    <view class='chooseimg between'>
+      <button type='' size='default' catchtap='close'>退出</button>
+      <button type='primary' size='default' catchtap='allShare'>立即分享</button>
+    </view>
+  </view>
+</view>

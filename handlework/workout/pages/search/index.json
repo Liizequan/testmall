@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "selTab": "/components/selTab/selTab",
+    "item": "/components/list/list"},
+  "navigationBarTitleText": "搜索"
+}

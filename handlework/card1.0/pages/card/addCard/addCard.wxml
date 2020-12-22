@@ -1,0 +1,104 @@
+<!--pages/card/addCard/addCard.wxml-->
+<view class='add-card'>
+  <!-- 名片头部信息 -->
+  <view class='card-user'>
+    <view class='card-bg'>
+      <image src='../../image/card/bg.png'></image>
+      <view class='card-text'>
+        <view class='user-logo'>
+          <view wx:if="{{photo==''}}">
+            <image src='../../image/card/logo.png'></image>
+          </view>
+          <view class='add-user-logo' wx:if="{{photo!=''}}">
+            <image src='{{horst+photo}}'></image>
+          </view>
+          <text wx:if="{{name==''}}">姓名</text>
+          <text wx:if="{{name!=''}}">{{name}}</text>
+          <text class='small' wx:if="{{petName==''}}">暂无职称</text>
+          <text class='small' wx:if="{{petName!=''}}">{{petName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit" >
+    <!-- 名片名称信息 -->
+    <view class='card-info'>
+      <view class='card-info-list'>
+        <text>头像</text>
+        <view class='info-image' bindtap='addLogo' wx:if="{{photo==''}}">
+          <image src='../../image/card/logo.png'></image>
+        </view>
+        <view class='add-info-image' bindtap='addLogo' wx:if="{{photo!=''}}">
+          <image src='{{horst+photo}}'></image>
+        </view>
+      </view>
+      <view class='card-info-list'>
+        <text>姓名</text>
+        <view class='info-input'><input type='text' name='name' bindinput='nameInput' placeholder='姓名' value="{{name}}"></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>岗位</text>
+        <view class='info-input'><input type='text' name='station' placeholder='岗位' value='{{station}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>职称</text>
+        <view class='info-input'><input type='text' name='petName' bindinput='petNameInput' placeholder='职称1' value='{{petName}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>职称</text>
+        <view class='info-input'><input type='text' name='petName2' placeholder='职称2' value='{{petName2}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>职称</text>
+        <view class='info-input'><input type='text' name='petName3'  placeholder='职称3' value='{{petName3}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>职称</text>
+        <view class='info-input'><input type='text' name='petName4'  placeholder='职称4' value='{{petName4}}'></input></view>
+      </view>
+    </view>
+
+    <!-- 名片联系信息 -->
+    <view class='card-info'>
+      <view class='card-info-list'>
+        <text>联系电话</text>
+        <view class='info-input'><input type='text' name='phone' placeholder='联系电话' value='{{phone}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>微信号</text>
+        <view class='info-input'><input type='text' name='weixin' placeholder='微信号' value='{{weixin}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>邮箱</text>
+        <view class='info-input'><input type='text' name='email' placeholder='邮箱' value='{{email}}'></input></view>
+      </view>
+      <view class='card-info-list'>
+        <text>公司</text>
+        <view class='info-input'><input type='text' name='component' placeholder='公司' value='{{component}}'></input></view>
+      </view>
+    </view>
+
+    <!-- 个性签名 -->
+    <view class="card-info">
+      <view class='card-info-synopsis'>
+        <text>个性签名</text>
+        <view><textarea name='signature' placeholder="个性签名" value='{{signature}}' maxlength='-1'/></view>
+      </view>
+    </view>
+
+    <!-- 个人简介 -->
+    <view class="card-info">
+      <view class='card-info-synopsis'>
+        <text>个人简介</text>
+        <view><textarea name='synopsis' placeholder="个人简介" value='{{summary}}' maxlength='-1'/></view>
+      </view>
+    </view>
+
+    <!-- 保存 -->
+    <view class='btn'>
+      <button type='warn' form-type="submit">保存</button>
+    </view>
+  </form>
+
+</view>

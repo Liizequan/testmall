@@ -1,0 +1,63 @@
+<view class="container" style="{{'height:'+scrollH+'px;overflow:scroll;'}}">
+  <view class="parent">
+    <view class="top">
+      <text class="post">{{all.name}}</text>
+      <text class="cash">{{all.min_salary}}k-{{all.max_salary}}k</text>
+    </view>
+    <view class="location">
+      <text>{{all.city}}{{all.region}}</text>
+      <text>{{all.experience}}</text>
+      <text>{{all.education}}</text>
+    </view>
+    <view class="detail">
+      <view wx:for="{{all.welfare}}" wx:key="index">{{item}}</view>
+    </view>
+  </view>
+  <view class="company" bindtap="toDetail" data-id="{{all.company.id}}">
+    <view class="comLeft">
+      <view class="comName">{{all.company.name}}</view>
+      <view class="comDetail">{{all.company.financing}} · {{all.company.number}} · {{all.company.industry}}</view>
+    </view>
+    <image src="{{all.company.logo}}" class="comLogo"></image>
+  </view>
+  <view class="section">
+    <view class="secTitle">工作性质</view>
+    <view class="btns">
+      <text wx:if="{{all.type==10}}">全职</text>
+      <text wx:if="{{all.type==20}}">兼职</text>
+    </view>
+  </view>
+  <view class="section">
+    <view class="secTitle">职位描述</view>
+    <view class="desc">{{all.company.desc}}</view>
+  </view>
+  <scroll-view scroll-x class="scrollView">
+    <view wx:for="{{all.company.image}}" wx:key="index">
+      <image src="{{item.img}}" mode="widthFix"></image>
+    </view>
+
+  </scroll-view>
+  <view class="section">
+    <view class="secTitle">工作地址</view>
+    <view class="address" wx:for="{{all.address}}" bindtap="guide" data-addr="{{item}}" wx:key="index" data-lng="{{all.lng}}" data-lat="{{all.lat}}">
+      <text>{{item}}</text>
+      <view class="rMore"></view>
+    </view>
+    <!-- <view class="address">
+      <text>广州萝岗区科学城科学大道286号七喜大厦607-2</text>
+      <view class="rMore"></view>
+    </view> -->
+  </view>
+</view>
+<view class="preSign">
+  <view class="share">
+    <button open-type="share" class="shareBtn" plain></button>
+    <image src="/assets/icon/share1.png"></image>
+    分享
+  </view>
+  <view class="{{['like',like?'iLike':'']}}" bindtap="iLike">
+    <image src="{{like?'/assets/icon/likeS1.png':'/assets/icon/like1.png'}}"></image>
+    {{like?'已':''}}收藏
+  </view>
+  <view class="now" bindtap="goNow">马上报名</view>
+</view>

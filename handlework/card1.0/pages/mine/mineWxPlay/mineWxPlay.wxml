@@ -1,0 +1,26 @@
+<!--pages/mine/mineWxPlay/mineWxPlay.wxml-->
+<view class='new'>
+  <view class='new-wx'>
+    <image src='../../image/mine/wxChare.png' mode='aspectFit'></image>
+  </view>
+  <view class='new-container'>
+    <view class='title'>
+      留下电话号码，经理马上联系你
+    </view>
+    <form bindsubmit="formSubmit" >
+      <view class='info'>
+        <view><text>姓名</text>
+          <input type='text' bindinput='nameInput' name='name' placeholder='请填写您的真实姓名' value='{{name}}'/></view>
+        <view><text>电话</text>
+          <input type='text' bindinput='phoneInput'name='phone'  placeholder='请填写您的联系电话' value='{{phone}}'/></view>
+        <view><text>行业</text>
+          <input type='text' bindinput='tradeInput'name='trade'  placeholder='请填写您从事的行业' value='{{trade}}'/></view>
+      </view>
+      <view class='submits'> <button type='warn' form-type="submit">提交</button> </view>
+    </form>
+    <view class='flow'>
+      <text>业务流程</text>
+      <view>提交资料<text>→</text>公司审核确认 <text>→</text> 上传产品 <text>→</text> 小程序上线</view>
+    </view>
+  </view>
+</view>

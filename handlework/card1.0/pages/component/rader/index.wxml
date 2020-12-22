@@ -1,0 +1,89 @@
+<!--pages/component/rader/index.wxml-->
+
+<view class='to-tab'>
+  <view style="flex:1;text-align: center;" data-index='0' bindtap='topTab'>
+    <text class="{{topAction==0?'active':''}}">时间</text>
+  </view>
+  <view style="flex:1;text-align: center;" data-index='1' bindtap='topTab'>
+    <text class="{{topAction==1?'active':''}}">行为</text>
+  </view>
+</view>
+
+<!-- 时间父项 -->
+<view wx:if="{{topAction==0}}" class='container'>
+
+  <view class="item" wx:for="{{item}}" wx:key="index">
+
+    <text class="item-time">{{item[0].time}}</text>
+     <view class="item-content"  wx:for="{{item}}" wx:key="index"  wx:if="{{item.status!='查看官网'}}">
+      <view><image src="{{item.avatarUrl}}"></image> <text class="name">{{item.name}}</text> 
+      <text class="time">{{item.create_time}}</text> </view>
+      <view class="content" wx:if="{{item.status=='查看名片'}}">第{{item.count}}次查看你的名片</view>
+      <view class="content" wx:if="{{item.status=='查看分享'}}">第{{item.count}}次查看每日分享</view>
+      <view class="content" wx:if="{{item.status=='查看产品'}}">第{{item.count}}次查看你的预约</view>
+      <view class="content" wx:if="{{item.status=='查看官网'}}">第{{item.count}}次查看你的官网</view>
+      <view class="content" wx:if="{{item.status=='转发名片'}}">第{{item.count}}次转发你的名片</view>
+      <view class="content" wx:if="{{item.status=='拨打电话'}}">第{{item.count}}次拨打你的电话</view>
+      <view class="content" wx:if="{{item.status=='复制邮箱'}}">第{{item.count}}次复制你的邮箱</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 行为父项 -->
+<view wx:if="{{topAction==1}}" class='container'>
+  <view class='box'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker" class='picker'>
+        近{{array[index]}}天内被查看的行为统计
+      </view>
+    </picker>
+    <view class='box-child'>
+      <view>
+        <view class='box-img'><image src='../../image/order.png' mode='widthFix' style="width:62rpx"></image></view>
+        <view class='jusitfy'>
+          <text>{{lookCardData.lookOfficial}}</text>
+          <view>查看官网</view>
+        </view>
+      </view>
+      <view>
+        <view class='box-img'><image src='../../image/product.png' mode='widthFix' style="width:62rpx"></image></view>
+        <view class='jusitfy'>
+          <text>{{lookCardData.lookProduct}}</text>
+          <view>查看预约</view>
+        </view>
+      </view>
+      <view>
+        <view class='box-img'><image src='../../image/dynamic.png' mode='widthFix' style="width:54rpx"></image></view>
+        <view class='jusitfy'>
+          <text>{{lookCardData.lookCard}}</text>
+          <view>查看名片</view>
+        </view>
+      </view>
+      <view>
+        <view class='box-img'><image src='../../image/share.png' mode='widthFix' style="width:54rpx"></image></view>
+        <view class='jusitfy'>
+          <text>{{lookCardData.lookDynamic}}</text>
+          <view>查看分享</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='behavior'>
+    <view class='list'>
+      <text>转发名片</text>
+      <text>{{lookCardData.relatCard}}</text> 
+    </view>
+    <view class='list'>
+      <text>拨打电话</text>
+      <text>{{lookCardData.call}}</text> 
+    </view>
+    <view class='list'>
+      <text>复制邮箱</text>
+      <text>{{lookCardData.codeEmail}}</text> 
+    </view>
+  </view>
+
+</view>
+

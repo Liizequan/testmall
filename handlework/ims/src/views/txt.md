@@ -1,0 +1,2 @@
+<el-link type="primary" style="margin-right:20px;" @click="goNoticeDetail(scope.row.id)">详情<i class="el-icon-arrow-right"></i></el-link>
+<el-link type="primary" @click="del(scope.row.id)">删除<i class="el-icon-delete"></i></el-link>

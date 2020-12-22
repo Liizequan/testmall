@@ -1,0 +1,26 @@
+.helpItem{
+  padding:20rpx 0;
+}
+.imgCon{
+  height: 352rpx;
+  position: relative;
+  border-radius: 10rpx;
+  overflow:hidden;
+}
+.reqImg{
+  display: inline-block;
+  width:100%;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+.reqTitle{
+  font-size: 32rpx;
+  color:#333;
+  margin-top:32rpx;
+}
+.reqDetail{
+  font-size: 28rpx;
+  color:#999;
+  margin-top:8rpx;
+}

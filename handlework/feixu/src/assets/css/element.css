@@ -1,0 +1,178 @@
+/* 登录 */
+.user-login main .form .el-input__inner{
+    border:0;
+    border-bottom: 2px solid #E9E9F0;
+}
+.user-login .form .el-checkbox{
+    color: #999;
+}
+
+.has-gutter tr  th{
+    background-color: #F7F6F9;
+}
+/* 左导航 */
+.index-aside .el-tabs__header{
+    width:99%;
+}
+.index-aside .el-tabs--right .el-tabs__header.is-right{
+    float: left;
+    margin-left:2px;
+}
+.index-aside .el-tabs__nav-wrap::after{
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+}
+.index-aside .el-menu{
+    border-right: 0;
+}
+.index-aside .el-tabs__item{
+    padding:0 50px;
+    color: #fff;
+    height: 53px;
+    line-height: 53px;
+}
+.index-aside .el-tabs__item:hover{
+    color: #fff;
+    /* background-color: #292745; */
+}
+.index-aside .el-tabs__item.is-active{
+    background-color: #292745;
+    color:#fff;
+}
+.index-aside .el-collapse{
+    border:0;
+}
+.index-aside .el-submenu__title{
+    height: 53px;
+    line-height: 53px;
+}
+.index-aside .el-tabs--right .el-tabs__active-bar.is-right{
+    width:3px;
+}
+
+
+/* 头部 */
+.index-main header .top .el-button:hover{
+    background-color: transparent;
+}
+/* .index-main header .el-popover{
+    padding:0;
+} */
+
+.popover{
+    padding:0;
+}
+
+
+/* 订单详情 */
+.btn-elblue{
+    background-color: #00A1E9;
+    color: #fff;
+}
+.btn-elorange{
+    background-color: #FF5531;
+    color: #fff;
+}
+
+/* 所有订单 */
+.all-order  .el-tabs__item.is-active{
+    font-size: 24px;
+    color: #00A1E9;
+}
+.all-order  .el-tabs__nav-wrap::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    z-index: 1;
+}
+.all-order .el-tabs__active-bar{
+    background-color:#00A1E9;
+}
+
+/* 分页 */
+.el-pagination__sizes,.el-pagination__total{
+    float: right;
+}
+
+/* 审批中心 */
+.approva .el-dialog__header{
+    padding-bottom: 0;
+}
+
+/* 管理员 */
+.admin .el-dialog--center .el-dialog__body{
+    padding:10px;
+}
+
+/* 订单添加上传 */
+.receivable .upload-demo .el-upload-list{
+    padding-left:80px;
+}
+
+/* 加载 */
+/* .el-loading-spinner{
+    top:350px;
+} */
+
+/* 导出 */
+.download{
+    display: inline-block;
+    width: 70px;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    margin-left:40px;
+}
+.export-left .download{
+    margin-left: 10px;
+}
+.download span,.download a{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    color: #606266;
+    text-decoration: none;
+}
+.download a:hover{
+    color: #3a8ee6;
+}
+/* 导入 */
+.no-need-uplod-list .el-upload-list{
+    display: none;
+}
+/* 订单中的上传回单 */
+.p-btn .el-upload-list{
+    display: none;
+}
+.all-order .colb{
+    color: #00A1E9;
+}
+
+
+
+
+.prop-class{
+    max-height: 400px;
+    overflow: auto;
+}
+
+.all-order .is-dialog .centent .el-input__inner {
+    border:none;
+    /* border-bottom: 1px solid #e5e5e5; */
+    height: 34px;
+    line-height: 34px;
+}
+
+
+.contents .el-input--prefix .el-input__inner{
+    padding-right:0 ;
+}

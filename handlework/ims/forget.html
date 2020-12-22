@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        body{
+            width:100%;
+            height: 100%;
+            color: #fff;
+            background: #303030 url('http://wx2.sinaimg.cn/large/d2e27164gy1fbu89h4rdej21kw10shdt.jpg') no-repeat fixed center; 
+            /* background: url('http://wx2.sinaimg.cn/large/d2e27164gy1fbu89h4rdej21kw10shdt.jpg') no-repeat center; */
+        }
+        form{
+            width:400px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0px 0px 15px 0px #fff;
+            padding:20px 40px;
+            border-radius: 10px;
+        }
+        table,input{
+            width:98%;
+        }
+        input{
+            padding:8px 10px;
+        }
+        tr{
+            padding:3px;
+        }
+        button{
+            width:100%;
+            height: 34px;
+            background-color: #fff;
+            border:1px solid #f0f0f0;
+            color: #303030;
+            border:1px solid #999;
+        }
+        .btn{
+            text-align: center;
+            padding:20px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table cellpadding="10">
+            <tr>
+                <td>验证结果：</td>
+                <td>信息不匹配</td>
+            </tr>
+            <tr>
+                <td>用户id：</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>输入新密码：</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>再次确认密码：</td>
+                <td><input type="password"></td>
+            </tr>
+        </table>
+        <div class="btn"><button>修改</button></div>
+    </form>
+</body>
+</html>

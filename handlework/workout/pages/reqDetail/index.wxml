@@ -1,0 +1,30 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="container">
+  <view class="reqTitle">{{title}}</view>
+  <view class="author">
+  <text>{{author}}</text>
+  <text>{{date}}</text>
+  </view>
+  <!-- <image src="{{cover}}" mode="widthFix" class="cover"></image> -->
+ <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  <view class="qrcode">
+    <image src="{{cover}}"></image>
+    <view class="codeText">
+      <view>扫码关注</view>
+      <view>掌握最新招聘信息，好工作不错过。</view>
+    </view>
+  </view>
+  <view class="cooperat">
+    <view>
+      <image src="/assets/icon/eye1.png" class="eyeIcon" mode="widthFix"></image>
+      <text>{{views}}</text>
+    </view>
+    <view class="shareP">
+      <image src="/assets/icon/share1.png" class="shareIcon"></image>
+      <text>分享</text>
+      <button open-type="share" plain class="shareBtn"></button>
+    </view>
+  </view>
+    <view class="upDown" wx:if="{{last.title}}" bindtap="getAnother" data-id="{{last.id}}">上一条：{{last.title}}</view>
+  <view class="upDown" wx:if="{{next.title}}" bindtap="getAnother" data-id="{{next.id}}">下一条：{{next.title}}</view>
+</view>

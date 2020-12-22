@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "全部分类",
+    "usingComponents":{
+      "service": "/components/service/service"
+    },
+    "disableScroll":true
+}

@@ -1,0 +1,33 @@
+<!-- 商品组 -->
+<view class="diy-goods" style="background: {{ itemStyle.background }};">
+  <view class="goods-list display__{{ itemStyle.display }} column__{{ itemStyle.column }}">
+    <scroll-view scroll-x="{{ itemStyle.display === 'slide' ? true : false }}">
+      <view class="goods-item" wx:for="{{ dataList }}" wx:key="this" wx:for-item="dataItem">
+        <navigator hover-class="none" url="{{ dataItem.goods_id > 0 ? '/pages/goods/index?goods_id=' + dataItem.goods_id+(dataItem.member=='10'?'&member_price='+dataItem.member_price:''): '' }}">
+          <!-- <view class="goods-image" style="background-image:url('{{dataItem.image}}')"> -->
+          <view class="goods-image" style="background-image:url('{{dataItem.image}}')">
+           
+            <!-- <image mode="aspectFill" src="{{ dataItem.image }}"></image> -->
+            <!-- <view class="vip_banner" wx:if="{{dataItem.member=='10'}}">
+              <view>
+                ￥
+                <text>{{ dataItem.member_price }}</text>
+              </view>
+              <view>会员特价</view>
+            </view> -->
+          </view>
+          <view class="detail">
+            <view wx:if="{{ itemStyle.show.goodsName > 0 }}" class="goods-name twolist-hidden f-30">
+              {{ dataItem.goods_name }}
+            </view>
+
+            <view wx:if="{{ itemStyle.show.goodsPrice > 0 }}" class="goods-price f-30 col-m">
+              ￥{{ dataItem.goods_price }}
+              <text class="sell">已售 {{ dataItem.sales_initial }}件</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

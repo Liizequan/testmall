@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/card/sendrever/index",
+    "pages/card/look",
+    "pages/card/card",
+    "pages/card/lookcard/index",
+    "pages/dynamic/dynamic",
+    "pages/login/login",
+    "pages/mine/mineNews/mineNews",
+    "pages/card/addCard/addCard",
+    "pages/mine/mineInfo/mineInfo",
+    "pages/mine/mineAbout/mineAbout",
+    "pages/mine/mineOrder/mineOrder",
+    "pages/index/order/order",
+    "pages/ecshop/ecshop",
+    "pages/dynamic/content/content",
+    "pages/mine/mineWxPlay/mineWxPlay",
+    "pages/mine/mineVoucher/mineVoucher"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#ED2727",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/image/tabbar09.png",
+        "selectedIconPath": "pages/image/tabbar00.png"
+      },
+      {
+        "pagePath": "pages/card/card",
+        "text": "名片",
+        "iconPath": "pages/image/tabbar01.png",
+        "selectedIconPath": "pages/image/tabbar05.png"
+      },
+      {
+        "pagePath": "pages/ecshop/ecshop",
+        "text": "微商城",
+        "iconPath": "pages/image/tabbar02.png",
+        "selectedIconPath": "pages/image/tabbar06.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/image/tabbar04.png",
+        "selectedIconPath": "pages/image/tabbar08.png"
+      }
+    ]
+  }
+}

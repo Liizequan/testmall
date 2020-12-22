@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="notice">
+    <view>请您尽可能清晰描述您的问题</view>
+    <view>{{rest}}/500</view>
+  </view>
+  <textarea  placeholder="请描述您的问题" value="{{textValue}}" bindinput="areaInp" maxlength="500"></textarea>
+  <view class="inpItem">
+    <view>您的姓名</view>
+    <input placeholder="请您填写真实姓名" placeholder-class="phClass" value="{{name}}" bindinput="nameInp"></input>
+  </view>
+  <view class="inpItem">
+    <view>联系电话</view>
+    <input placeholder="请您填写有效的联系方式" placeholder-class="phClass" value="{{phone}}" bindinput="phoneInp" type="number"></input>
+  </view>
+  <view class="submit" bindtap="submit">提交</view>
+</view>

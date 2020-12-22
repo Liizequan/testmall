@@ -1,0 +1,84 @@
+<view class="conBox">
+  <view class="container" bindtap="inpPhone" data-inpWho="company">
+    <view class="left">公司名称</view>
+    <view class="right">
+      <view>{{company}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="inpPhone"  data-inpWho="depart">
+    <view class="left">所在部门</view>
+    <view class="right">
+      <view>{{depart}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="inpPhone"  data-inpWho="position">
+    <view class="left">职位</view>
+    <view class="right">
+      <view>{{position}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="toInput"  data-inpWho="content">
+    <view class="left">工作内容</view>
+    <view class="right">
+      <!-- <view>{{content}}</view> -->
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="showDatePk" data-time="start">
+    <view class="left">开始时间</view>
+    <view class="right">
+      <view>{{start}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox last">
+  <view class="container" bindtap="showDatePk" data-time="end">
+    <view class="left">结束时间</view>
+    <view class="right">
+      <view>{{end}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view bindtap="saveAll" class="saveAll" wx:if="{{action=='add'}}">保存</view>
+<view wx:if="{{action=='edit'}}" class="btns">
+  <view class="delBtn" bindtap="del">删除</view>
+  <view bindtap="saveAll" class="saveBtn">保存</view>
+</view>
+<view class="selfPicker" wx:if="{{pickShow}}" bindtap="showDatePk">
+  <view class="canclConf">
+    <text class="cancel" catchtap="cancel">取消</text>
+    <text class="confirm" catchtap="confirm">确定</text>
+  </view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 240px;text-align:center;background:#fff;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px" wx:key="index">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px" wx:key="index">{{item}}月</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="phoneBox" wx:if="{{phShow}}" bindtap="closePhone">
+  <view class="phoneMain" catchtap="keep">
+    <view class="phTitle">{{inpWho=='company'?'公司名称':(inpWho=='depart'?'所在部门':(inpWho=='position'?'职位':(inpWho=='content'?'工作内容':'')))}}</view>
+    <view class="inpBox">
+      <input placeholder="请输入{{inpWho=='company'?'公司名称':(inpWho=='depart'?'所在部门':(inpWho=='position'?'职位':(inpWho=='content'?'工作内容':'')))}}" class="phInput" bindinput="inpChang" cursor-spacing="100"></input>
+      <!-- <text class="rest">11/11</text> -->
+    </view>
+    <view class="save" bindtap="save">保存</view>
+    <text class="close" bindtap="closePhone">关闭</text>
+  </view>
+</view>

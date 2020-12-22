@@ -1,0 +1,69 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine'>
+  <view class="mine-bg">
+    <image src='../image/mine/bg.png' mode='widthFix'></image>
+    <view class='user'>
+      <image src='{{userLogo}}' mode='aspectFill'></image>
+      <text class='mine-title'>{{userName}}</text>
+    </view>
+  </view>
+  <view class='mine-list'>
+    <navigator url='./mineInfo/mineInfo' hover-class='none'>
+      <text>个人资料</text> 
+      <image src='../image/mine/right.png' mode='widthFix'></image>
+    </navigator>
+    <navigator url='./mineVoucher/mineVoucher' hover-class='none'> 
+      <text>加息券</text> 
+      <image src='../image/mine/right.png' mode='widthFix'></image>
+    </navigator>
+    <navigator url='./mineOrder/mineOrder' hover-class='none'> 
+      <text>我的预约</text> 
+      <image src='../image/mine/right.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <view class='mine-list'>
+    <navigator url='./mineNews/mineNews' hover-class='none'> 
+      <text>我的消息</text> 
+      <!-- <image src='../image/mine/right.png' mode='widthFix'></image> -->
+      <view class='number'>
+        <text wx:if='{{count!=0}}'>{{count}}</text>
+        <image wx:else src='../image/mine/right.png' mode='widthFix'></image>
+      </view>
+    </navigator>
+    <navigator url='./mineAbout/mineAbout' hover-class='none'> 
+      <text>关于我们</text> 
+      <image src='../image/mine/right.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  
+  <view class='mine-list'>
+    <navigator url='./mineWxPlay/mineWxPlay' hover-class='none'>
+      <text>做一样的小程序</text> 
+      <image src='../image/mine/right.png' mode='widthFix'></image>
+    </navigator>
+    <navigator url='./mine' hover-class='none' bindtap='useFinancial' wx-if="{{asFinancial}}">
+      <text>{{title}}</text> 
+      <image src='../image/mine/right.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+</view>
+
+<!-- 预约弹窗 -->
+<view class='order-hide' wx:if="{{orderHide}}">
+  <view class='bg' bindtap='closeTap'></view>
+  <view class='order-kuang'>
+    <view class='kuang-center'>
+      <text>是否成为理财师</text>
+      <view>{{useorderData.userName}}</view>
+    </view>
+    <form bindsubmit="formSubmit">
+      <view class='kuang-input'>
+        <view> <text>姓名</text> <input name="name" placeholder="请输入您的姓名" ></input></view>
+        <view> <text>电话</text> <input name="phone" placeholder="请输入您的电话"></input></view>
+      </view>
+      <view class='submit' >
+        <button type='warn' form-type="submit">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

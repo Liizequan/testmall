@@ -1,0 +1,46 @@
+<!--pages/mine/order/order.wxml-->
+<view class='fine' wx:if="{{noFine}}">
+  <view class='fine-container'>
+    <view class='fine-user' wx:for="{{myOrderData}}" wx:key="index">
+      <view class='user-name'>
+        {{item.product.name}}
+        <text class='self'>推荐</text>
+        <text class='self'>{{item.product.mode_label}}</text>
+      </view>
+      <view class='user-info'>
+        <view class='info-list'>
+          产品期限
+          <view>{{item.product.term}}个月</view>
+        </view>
+        <view class='info-list'>
+          付息方式
+          <view>{{item.product.mode}}</view>
+        </view>
+        <view class='info-list'>
+          起投金额
+          <view>￥{{item.product.amount}}万起</view>
+        </view>
+        <view class='info-list'>
+          基准利率
+          <view class='red'>{{item.product.interest}}%</view>
+        </view>
+      </view>
+      <view class='fint-line'>
+        <view style='width:{{item.product.interest}}%;'></view>
+      </view>
+      <view class='fint-surplus'>
+        <text>剩余额度</text> <text>{{item.product.quota}}万</text> 
+      </view>
+      <view class='not-order-yes'>
+        <text data-index='{{index}}' data-id="{{item.id}}" bindtap='remove'>取消预约</text>
+        <text class='red'>已预约</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{!noFine}}">
+  <view class='nodata' bindtap='ecshop'>
+    <text>暂无预约</text>
+    <view>查看更多产品</view>
+  </view>
+</view>

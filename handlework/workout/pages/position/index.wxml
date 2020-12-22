@@ -1,0 +1,24 @@
+<view class="search">
+  <view class="condition">
+    <image src="/assets/icon/search1.png"></image>
+    <input placeholder="搜索公司/职位" placeholder-class="searchPH" bindfocus="inpFocus" bindconfirm="search" bindblur="inpBlur" value="{{condit}}"></input>
+  </view>
+</view>
+<view wx:if="{{hasRes}}">
+<selTab region="{{hotList}}" id="sel" iShow="{{iteList.length}}" list="{{hotList}}"></selTab>
+<!-- <view style="{{'height:'+scrollH+'px;overflow:scroll;'}}">
+  <item wx:for="{{iteList}}" wx:key="index" bindtap="toPosiDetl" positions="{{item}}" data-id="{{item.id}}"></item>
+</view> -->
+<scroll-view scroll-y="true" style="{{'height:'+scrollH+'px;overflow:scroll;'}}" lower-threshold="200" bindscrolltolower="scrolltolower">
+ <!-- bindscrolltolower="bottomHere" bindscroll="scrolling" -->
+  <item wx:for="{{iteList}}" wx:key="index" bindtap="toPosiDetl" positions="{{item}}" data-id="{{item.id}}"></item>
+  <view wx:if="{{noMore&&iteList.length>2}}" class="deadline">到底了</view>
+  <view wx:if="{{!noMore&&iteList.length>2}}" class="deadline">上拉进行加载</view>
+</scroll-view>
+</view>
+<view class="container" wx:else>
+  <view class="hot" wx:if="{{list.length}}">热门搜索</view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index" bindtap="toSearch" data-item="{{item}}">{{item}}</view>
+  </view>
+</view>

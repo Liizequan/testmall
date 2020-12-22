@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/position/index",
+    "pages/store/index",
+    "pages/mine/index",
+    "pages/search/index",
+    "pages/req/index",
+    "pages/reqDetail/index",
+    "pages/introduce/index",
+    "pages/posiDetail/index",
+    "pages/resume/index",
+    "pages/perInfo/index",
+    "pages/upResume/index",
+    "pages/record/index",
+    "pages/suggest/index",
+    "pages/selfEvalu/index",
+    "pages/ideaPosi/index",
+    "pages/searchPosi/index",
+    "pages/addExperi/index",
+    "pages/addWork/index",
+    "pages/address/index",
+    "pages/login/index",
+    "pages/webView/index",
+    "pages/workContent/index",
+    "pages/speak/man/man",
+    "pages/speak/new/new",
+    "pages/speak/managenormalusesentence/managenormalusesentence",
+    "pages/speak/msg/msg",
+    "pages/speak/sysinfo/sysinfo"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "调用地图"
+    }
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#0088FF",
+    "navigationBarTitleText": "小程序名称",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#0088FF",
+    "color": "#7F8389",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/icon/index.png",
+        "selectedIconPath": "/assets/icon/indexS.png"
+      },
+      {
+        "pagePath": "pages/position/index",
+        "text": "职位",
+        "iconPath": "/assets/icon/position.png",
+        "selectedIconPath": "/assets/icon/positionS.png"
+      },
+      {
+        "pagePath": "pages/speak/msg/msg",
+        "text": "消息",
+        "iconPath": "/assets/icon/store.png",
+        "selectedIconPath": "/assets/icon/storeS.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/assets/icon/mine.png",
+        "selectedIconPath": "/assets/icon/mineS.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+/* pages/card/sendrever/index.wxss */
+.list{
+  padding:20rpx 40rpx;
+  background: #fff;
+  margin:40rpx 40rpx;
+  font-size: 28rpx;
+  color: #666;
+  border-radius: 10rpx;
+  box-shadow: 4rpx 4rpx 10rpx 0 #DBDBDB;
+}
+.user-info {
+  color:#333;
+  font-size: 26rpx;
+  display: flex;
+  align-self: center;
+  margin:20rpx 0 40rpx;
+  justify-content: space-between
+}
+.user-info .user-name{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.user-info .user-time{
+  font-weight: 400;
+  color: #999;
+}
+.user-info .licaishi,.user-info .licaishi text{
+  flex:1;
+  display: flex;
+  padding-left: 20rpx;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+}
+.user-info image{
+  width:90rpx;
+  border-radius: 5rpx;
+  align-self: center;
+}
+.user-info image.right{
+  width:18rpx;
+}
+.list .user-text{
+  flex: 1;
+  border-top:1px solid #EEEEEE;
+}
+.list .user-text>view{
+  margin:20rpx 0 10rpx;
+  position: relative;
+}
+.fa-img{
+  display: flex;
+  flex-wrap: wrap;
+}
+.lu-image{
+  width:180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  margin-bottom: 25rpx;
+}
+.fa-img .lu-image:nth-child(2),
+.fa-img .lu-image:nth-child(5),
+.fa-img .lu-image:nth-child(8){
+  display: inline-block;
+  margin:0 25rpx;
+}
+.lu-image image{
+  width:180rpx;
+  height: 180rpx;
+}
+.user-time{
+  flex: 1;
+  text-align: right;
+}
+/* 用户信息 */
+.my-user-info{
+  display: flex;
+}
+.my-user-info .user+.user{
+  padding-left: 10rpx;
+}
+.my-user-info image{
+  width:50rpx;
+  height: 50rpx;
+}

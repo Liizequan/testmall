@@ -1,0 +1,108 @@
+page {
+  background: rgba(245, 245, 245, 1);
+}
+
+.parent {
+  background: #fff;
+  padding: 24rpx;
+  padding-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 280rpx;
+  overflow:auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.cash {
+  color: #08f;
+  font-size: 32rpx;
+}
+
+.logo {
+  width: 48rpx;
+  margin-right: 8rpx;
+}
+
+.detail {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+  flex-wrap: wrap;
+}
+
+.detail view {
+  height: 48rpx;
+  line-height: 48rpx;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+  padding: 6rpx 24rpx;
+  margin-bottom: 10rpx;
+}
+
+.company {
+  color: #999;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  margin: 16rpx 0;
+}
+
+.location {
+  color: #999;
+  font-size: 24rpx;
+  background: rgba(255, 255, 255, 1);
+  margin: 16rpx 0;
+}
+
+.location text {
+  margin-right: 16rpx;
+}
+
+.delete {
+  background: red;
+  color: #fff;
+  width: 100rpx;
+  display: inline-block;
+  position: relative;
+  height: 280rpx;
+  font-size: 34rpx;
+}
+
+.delete text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.moveArea {
+  height: 280rpx;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+.moveArea:nth-last-of-type(1){
+  margin-bottom:0;
+}
+.moveView {
+  height: 280rpx;
+  width: 120%;
+  display: flex;
+}
+
+.moveCon {
+  height: 100vh;
+  overflow: scroll;
+}

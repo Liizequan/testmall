@@ -1,0 +1,31 @@
+<view class="moveCon" style="{{'width:'+parentW+'px;overflow-x:hidden;height:'+parentH+'px;overflow-y:scroll;'}}" wx:if="{{iteList.length!=0}}">
+<movable-area class="moveArea" wx:for="{{iteList}}" wx:key="index" bindtap="toPosiDetl" data-id="{{item.work.id}}" style="{{'width:'+parentW+'px;'}}">
+  <movable-view class="moveView" x="{{item.x}}" direction="horizontal" bindtouchend="touchEnd" bindtouchstart="touchStart" animation="{{true}}" data-id="{{item.id}}"  style="{{'width:'+(parentW+delW)+'px;'}}">
+    <view class="parent" style="{{'width:'+parentW+'px;'}}">
+      <view class="top">
+        <text class="post">{{item.work.name}}</text>
+        <text class="cash">{{item.work.min_salary}}k-{{item.work.max_salary}}k</text>
+      </view>
+      <view class="location">
+        <text>{{item.work.city}}{{item.work.region}}</text>
+        <text>{{item.work.experience}}</text>
+        <text>{{item.work.education}}</text>
+      </view>
+      <view class="detail">
+        <view wx:for="{{item.work.welfare}}" wx:key="index">{{item}}</view>
+      </view>
+      <view class="company">
+        <image src="{{item.work.company.logo}}" class="logo" mode="widthFix"></image>
+        <text>{{item.work.company.name}}</text>
+      </view>
+    </view>
+    <view class="delete" catchtap="delete" data-id="{{item.work.id}}">
+      <text>删除</text>
+    </view>
+  </movable-view>
+</movable-area>
+</view>
+
+<view style="height:100vh;display:flex;align-items:center;justify-content:center;color:#999;" wx:if="{{iteList.length==0}}">
+<view class="nothing">您还没有收藏职位</view>
+</view>

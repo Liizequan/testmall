@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "selTab":"/components/selTab/selTab",
+    "item": "/components/list/list"
+  },
+  "navigationBarTitleText": "职位",
+  "disableScroll":true
+}

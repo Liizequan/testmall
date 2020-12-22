@@ -1,0 +1,164 @@
+page{
+  background: rgba(245,245,245,1);
+}
+.conBox{
+  padding:0 36rpx 0;
+}
+.container{
+  padding-bottom:36rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1px solid rgba(229,229,229,1);
+}
+.rBtn{
+  width:20rpx;
+  height: 20rpx;
+  border-top:2px solid #C7C7CC;
+  border-right: 2px solid #C7C7CC;
+  transform: rotate(45deg);
+  margin-left:8rpx;
+}
+.avatar{
+  width:100rpx;
+  height: 100rpx;
+}
+.right{
+  color:#999;
+  display: flex;
+  align-items: center;
+}
+.left{
+  color:#333;
+}
+.last{
+  margin-bottom:10rpx;
+}
+.last .container{
+  border:none;
+}
+.selfPicker{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  font-size: 28rpx;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.canclConf{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom:1px solid rgba(229,229,229,1);
+  padding:20rpx;
+}
+.cancel{
+  color:#ccc;
+  font-size: 34rpx;
+}
+.confirm{
+  color:#09bb07;
+  font-size: 34rpx;
+}
+.phoneBox{
+  height:100vh;
+  width: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.close{
+  content:"关闭";
+  position:absolute;
+  top:18rpx;
+  right:22rpx;
+  color:#0088FF;
+  font-size: 20rpx;
+}
+.phoneMain{
+  width:560rpx;
+  background:#fff;
+  border-radius: 16rpx;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.phTitle{
+  color:#333;
+  font-size: 32rpx;
+  margin-top:30rpx;
+}
+.phInput{
+  width:100%;
+  height: 80rpx;
+  border:1px solid #ccc;
+  margin:36rpx auto 0;
+  display:block;
+}
+.save{
+  font-size: 32rpx;
+  color:#0088FF;
+  padding:28rpx;
+  border-top:1px solid #ccc;
+}
+.inpBox{
+  position:relative;
+  padding-bottom:64rpx;
+  width:90%;
+  margin:0 auto;
+}
+.rest{
+  font-size: 20rpx;
+  color:#0088FF;
+  float:right;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  padding:0 36rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom:40rpx;
+}
+.delBtn{
+  border: 2rpx solid #0088FF;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 6rpx;
+  width:45%;
+  color:#0088FF;
+}
+.saveBtn{
+  background:#0088FF;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 6rpx;
+  color:#fff;
+  width:45%;
+}
+.saveAll{
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #0088FF;
+  color:#fff;
+  text-align: center;
+  border-radius: 6rpx;
+  position:absolute;
+  bottom:40rpx;
+  width:688rpx;
+  left:50%;
+  transform:translateX(-50%);
+}

@@ -1,0 +1,73 @@
+/* pages/mine/mineInfo/mineInfo.wxss */
+page{
+  background-color: #fff;
+}
+.mineInfo{
+  padding:40rpx;
+  color: #999999;
+  font-size: 26rpx;
+}
+.bettwen{
+  display: flex;
+  height: 86rpx;
+  line-height: 86rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid #E5E5E5;
+}
+.around .bettwen,.around .radio-group{
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.around .bettwen text{
+  vertical-align: middle;
+  padding-right: 20rpx;
+}
+.around .bettwen image{
+  width: 20rpx;
+  height: 10rpx;
+  vertical-align: middle;
+}
+.bettwen input{
+  text-align: right;
+  align-self: center;
+  flex: 1;
+}
+.around .active image{
+  rotate: 180deg;
+}
+.around .radio-group{
+  display: flex;
+  justify-content: center;
+}
+.around .radio-group label{
+  padding:0 40rpx;
+}
+.around .radio-group radio{
+  transform:scale(0.6);
+}
+.column{
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+}
+.column text{
+  height: 86rpx;
+  line-height: 86rpx;
+  padding-right: 40rpx;
+  background-color: #fdfefd;
+  border-bottom: 1px solid #E5E5E5;
+}
+.btns{
+  position: absolute;
+  left:0;
+  width: 100%;
+  bottom: 0;
+}
+.btns button{
+  font-size: 26rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  background-color: #ED2727;
+  margin:120rpx 85rpx;
+}

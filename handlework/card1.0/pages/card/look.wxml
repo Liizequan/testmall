@@ -1,0 +1,28 @@
+<!--pages/card/card.wxml-->
+<!-- 返回名片滑块 -->
+<movable-area style="height: 90vh; width: 99%;" wx-if="{{asFinancial}}">
+  <movable-view class='add-user-logo'  x="{{width}}" y="{{height}}" direction="all">
+    <view bindtap='back'><image style='background:rgba(0,0,0,0.2); padding:5rpx 7rpx 10rpx; border-radius:50%;' src='../image/tabbar09.png' mode='widthFix'></image></view>
+  </movable-view>
+</movable-area>
+
+<!-- 中心内容 -->
+<scroll-view class='scroll' scroll-y='true'>
+  <!-- 雷达 -->
+  <raderIndex item='{{item}}' lookCardData="{{lookCardData}}" style="margin-bottom:100rpx;" wx:if="{{look==0}}"></raderIndex>
+
+  <!-- 消息 -->
+  <raderInfo wx:if="{{look==1}}" client="{{client}}" listUser="{{listUser}}"></raderInfo>
+
+  <!-- 我的 -->
+  <raderMine userCard="{{userCard}}" wx:if="{{look==2}}"></raderMine>
+
+</scroll-view>
+
+<!-- 底部导航 -->
+<view class='tabbar'>
+  <view class='tabbar-list' wx:for="{{tarBar}}" wx:key="index" data-index="{{index}}" bindtap='switchBar'>
+    <view class='tabbar-list-img'><image mode='widthFix' src='{{look==index?item.imgActive:item.img}}'></image></view>
+    <view style="color:  {{ look==index? '#ED2E2E' :  '#AFB2B4' }}">{{item.title}}</view>
+  </view>
+</view>

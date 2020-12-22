@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "raderIndex": "/pages/component/rader/index",
+    "raderInfo": "/pages/component/rader/info",
+    "raderMine": "/pages/component/rader/mine"
+  },
+  "navigationBarTitleText": ""
+}

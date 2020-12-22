@@ -1,0 +1,17 @@
+/* page{
+  background:rgba(245,245,245,1);
+} */
+.container{
+  padding:32rpx;
+}
+.rMore{
+  width:20rpx;
+  height: 20rpx;
+  border-top:2px solid #C7C7CC;
+  border-right: 2px solid #C7C7CC;
+  transform: rotate(45deg);
+}
+.forTab{
+  width: 400rpx;
+  text-align: right;
+}

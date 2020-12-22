@@ -1,0 +1,26 @@
+<view class="search">
+  <view class="condition">
+    <image src="/assets/icon/search1.png"></image>
+    <input placeholder="输入关键字" placeholder-class="searchPH"></input>
+  </view>
+</view>
+<view style="{{'height:'+scrollH+'px;overflow:scroll;'}}">
+  <view class="conBox" wx:for="[1234567891011]" wx:key="index" bindtap="showMask">
+    <view class="container">
+      <view class="left">职位</view>
+      <view class="right">
+        <view class="rBtn"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="mask" wx:if="{{maskShow}}" bindtap="closeMask">
+</view>
+<view class="{{['mover',maskShow?'leftMove':'']}}">
+  <view class="mLeft">
+    <view wx:for="{{rankOne}}" wx:key="index" class="{{['item',leftSel==index?'leftSel':'']}}" bindtap="selLeft" data-index="{{index}}">{{item}}</view>
+  </view> 
+  <view class="mRight">
+    <view wx:for="{{rankTwo}}" wx:key="index" class="item" bindtap="getPosi" data-item="{{item}}">{{item}}</view>
+  </view>
+</view>

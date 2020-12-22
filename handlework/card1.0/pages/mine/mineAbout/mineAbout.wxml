@@ -1,0 +1,12 @@
+<!--pages/mine/mineAbout/mineAbout.wxml-->
+
+<import src="../../../wxParse/wxParse.wxml"/>
+<view>
+  <!-- 文章内容 -->
+    <!-- <view class='rich'> 
+      <rich-text nodes="{{indexProduct}}"></rich-text> 
+    </view> -->
+    <view class='about'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+</view>

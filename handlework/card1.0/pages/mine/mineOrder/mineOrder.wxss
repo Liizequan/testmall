@@ -1,0 +1,87 @@
+/* pages/mine/order/order.wxss */
+/* 精品推荐 */
+/* .fine-container */
+.fine-user{
+  padding:40rpx 41rpx;
+  margin-bottom:10rpx;
+  background-color: #fff;
+}
+.fine-user:last-child{
+   margin-bottom:0rpx;
+}
+.user-name{
+  color: #353535;
+  font-size: 30rpx;
+  font-weight:bold;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.user-name text{
+  display: inline-block;
+  color: #ED2727;
+  font-size: 20rpx;
+  font-weight: 400;
+  border-radius: 6rpx;
+  align-self: center;
+  border:1px solid #ED2727;
+  padding:3rpx 10rpx;
+  margin-left:20rpx;
+}
+.user-info{
+  display: flex;
+  font-size: 26rpx;
+  color:#888888;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+.user-info>view{
+  padding-top:25rpx;
+}
+.info-list view{
+  color: #353535;
+  padding:20rpx 0;
+}
+.fint-line,.fint-line view{
+  background-color: #E5E5E5;
+  height:6rpx;
+  border-radius:3px;
+}
+.fint-line view{
+  background-color:red;
+}
+.fint-surplus{
+  display: flex;
+  padding:20rpx 0 30rpx;
+  justify-content: space-between;
+  color: #888888;
+  font-size: 26rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* 取消预约 */
+.not-order-yes{
+  font-size: 26rpx;
+  color: #999999;
+  text-align: right;
+  padding-top:30rpx;
+}
+.red{
+  color: #ED2727 !important;
+}
+.not-order-yes .red{
+  display: inline-block;
+  padding-left:54rpx;
+}
+/* 无数据样式 */
+.nodata{
+  color:#ED2727;
+  text-align: center;
+  padding:100rpx;
+  font-size: 24rpx;
+}
+.nodata text{
+  color: #999;
+  display: inline-block;
+  padding:20rpx;
+}

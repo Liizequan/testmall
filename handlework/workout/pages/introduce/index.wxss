@@ -1,0 +1,148 @@
+page{
+  background:#fff; 
+}
+.top{
+  background:#fff;
+  height: 194rpx;
+}
+.name{
+  position: relative;
+}
+.name image{
+  width:100rpx;
+  height: 100rpx;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  position:absolute;
+  top:50%;
+  right:0;
+}
+.detail{
+  font-size: 28rpx;
+  color:#999;
+  margin-top:6rpx;
+}
+.tab{
+  display: flex;
+  background: #fff;
+  padding:0 32rpx;
+}
+.tab view{
+  margin-right: 40rpx;
+}
+.selected{
+  color:#333;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-bottom:2px solid rgba(0,136,255,1);
+  padding-bottom:34rpx;
+}
+.unselect{
+  color:#999;
+  font-size: 28rpx;
+}
+.scrollView{
+  height: 352rpx;
+  white-space: nowrap;
+  margin:30rpx 0 36rpx;
+}
+.scrollView view{
+  width:90%;
+  margin-right:20rpx;
+  height: 352rpx;
+  border-radius: 20rpx;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+.scrollView view:nth-last-of-type(1){
+  margin-right: 0;
+}
+.scrollView image{
+  width:100%;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+.title{
+  font-size: 32rpx;
+  color:#333;
+  font-weight: Regular;
+}
+.compDetail{
+  font-size: 28rpx;
+  color:#999;
+  line-height: 50rpx;
+}
+.more{
+  color:#0088FF;
+  font-size: 24rpx;
+  margin-top:6rpx;
+}
+.detlContain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightArrow{
+  width:12rpx;
+  height: 12rpx;
+  border-top:1px solid #ccc;
+  border-right:1px solid #ccc;
+  transform: rotate(45deg);
+}
+.compMore{
+  margin-top:80rpx;
+}
+.parent{
+  padding:20rpx;
+  background:#fff;
+  margin-top:10rpx;
+  border-bottom:10rpx solid rgba(245,245,245,1);
+}
+.parent:nth-last-of-type(1){
+  border-bottom: none;
+}
+.itemTop{
+  display: flex;
+  justify-content: space-between;
+}
+.post{
+  font-size: 32rpx;
+  color:#333;
+  font-weight:bold;
+}
+.cash{
+  color:#0088FF;
+  font-size: 32rpx;
+}
+.logo{
+  width:48rpx;
+  height: 48rpx;
+}
+.detail{
+  display: flex;
+  font-size: 24rpx;
+  color:#999;
+  flex-wrap:wrap;
+}
+.detail view{
+  height:48rpx;
+  line-height: 48rpx;
+  background:rgba(245,245,245,1);
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+  padding:6rpx 24rpx;
+}
+.location{
+  color:#999;
+  font-size: 24rpx;
+  margin:16rpx 0;
+}
+.location text{
+  margin-right: 16rpx;
+}
+.companyInfo{
+  background:#fff;
+}

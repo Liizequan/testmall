@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="notice">
+    <view>请用一句话描述自己</view>
+    <view>{{rest}}/140</view>
+  </view>
+  <textarea  placeholder="请描述自己" placeholder-class="areaPh" value="{{text}}" bindinput="inp"></textarea>
+  <view class="submit" bindtap="save">保存</view>
+</view>

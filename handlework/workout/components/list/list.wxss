@@ -1,0 +1,52 @@
+.parent{
+  background:#fff;
+  padding:40rpx 30rpx;
+  margin-bottom:10rpx;
+  overflow-y:scroll;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.post{
+  font-size: 32rpx;
+  color:#333;
+}
+.cash{
+  color:#0088FF;
+  font-size: 32rpx;
+}
+.logo{
+  width:48rpx;
+  margin-right:8rpx;
+}
+.detail{
+  display: flex;
+  font-size: 24rpx;
+  color:#999;
+  flex-wrap:wrap;
+}
+.detail view{
+  height:48rpx;
+  line-height: 48rpx;
+  background:rgba(245,245,245,1);
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+  padding:6rpx 24rpx;
+}
+.company{
+  color:#999;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  margin:16rpx 0;
+}
+.location{
+  color:#999;
+  font-size: 24rpx;
+  background:rgba(255,255,255,1);
+  margin:16rpx 0;
+}
+.location text{
+  margin-right: 16rpx;
+}

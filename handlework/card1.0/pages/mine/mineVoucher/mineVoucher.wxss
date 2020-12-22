@@ -1,0 +1,64 @@
+/* pages/mine/voucher/voucher.wxss */
+.list{
+  background:linear-gradient(90deg,rgba(237,39,39,1) 0%,rgba(255,140,83,1) 100%);
+  width:670rpx;
+  margin:40rpx auto;
+  height:200rpx;
+  color: #fff;
+  border-radius:16rpx;
+  display: flex;
+}
+.nolist{
+  width:670rpx;
+  margin:40rpx auto;
+  height:200rpx;
+  color: #fff;
+  border-radius:16rpx;
+  display: flex;
+  background-color: #E4E4E4;
+}
+.list-contaienr{
+  padding:40rpx;
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  align-self: center;
+}
+.list-contaienr view{
+  align-self: center;
+}
+.member{
+  font-size: 26rpx;
+  font-weight: 400;
+  flex: 1;
+}
+.member-title{
+  font-size: 37rpx;
+  font-weight:500;
+  padding:10rpx 0;
+}
+.percentage {
+  padding:10rpx 0 10rpx 30rpx;
+  margin-left:20rpx;
+  font-size:40rpx;
+  position: relative;
+  border-left:1px dashed rgba(255,255,255,.5);
+}
+.percentage text{
+  font-size: 103rpx;
+}
+.percentage view{
+  position:absolute;
+  width:150rpx;
+  height:150rpx;
+  color:#ED2727;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 150rpx;
+  border-radius:50%;
+  top:50%;
+  z-index:1000;
+  left:20%;
+  transform:translate(-20%,-50%);
+  border:1px dashed #ED2727;
+}

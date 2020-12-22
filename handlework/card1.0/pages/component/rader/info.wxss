@@ -1,0 +1,165 @@
+/* pages/component/rader/info.wxss */
+.tabbar{
+  display: flex;
+  color:#444444;
+  font-size: 30rpx;
+  background: #fff;
+  justify-content: space-around;
+}
+.flex{
+  display: flex;
+}
+.tabbar text{
+  padding:20rpx;
+}
+.tabbar-active{
+  color:red;
+  border-bottom: 1px solid red;
+}
+.search{
+  display: flex;
+  padding:0 40rpx;
+  background: #fff;
+  font-size: 28rpx;
+  color:#666;
+}
+.search input{
+  align-self: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  flex:1;
+  border:1px solid #444444;
+  border-right:transparent;
+  padding-left:20rpx;
+}
+/* 图片 */
+.add-after-image{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  padding:15rpx 0;
+}
+.add-after-image view{
+  width:200rpx;
+  margin: 15rpx 0;
+}
+.add-after-image image{
+  width:200rpx;
+  height: 200rpx;
+}
+/* 添加按钮 */
+.add-img{
+  width:200rpx;
+  height:200rpx;
+  line-height:190rpx;
+  text-align:center;
+  font-size:100rpx;
+  background:#eee;
+  font-weight:200;
+  color:#ddd;
+}
+.search button{
+  border-radius: 0;
+  /* border-left: 0; */
+  height: 64rpx;
+  line-height: 64rpx;
+  border:1px solid #444444;
+}
+.search button::after,.search button::before{
+  border-radius: 0;
+}
+.search button icon{
+  padding-top:10rpx;
+}
+
+.tabbar-left{
+  padding:20rpx 40rpx;
+  /* background:#fff; */
+  margin-top:2rpx;
+  font-size: 26rpx;
+  margin-bottom:120rpx;
+}
+.add-user{
+  text-align: center;
+  font-size:30rpx;
+  color:#333;
+}
+/* 其他用户 */
+.userInfo{
+  display: flex;
+  flex-direction: column;
+}
+.userInfo view{
+  padding:18rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.userInfo view text{
+  align-self: center;
+}
+.userInfo button{
+  flex: 1;
+  border-radius: 0;
+}
+.userInfo-btn{
+  position: fixed;
+  bottom: 100rpx;
+  left:0;
+  width:100%;
+}
+.qunfa-btn button::after{
+  border:0;
+}
+.userInfo-btn button{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border:0;
+}
+.userInfo-btn button::after {
+  border-radius: 0;
+  border:0;
+}
+.relay-sub text{
+  display:inline-block;
+  padding:10rpx 20rpx;
+  border:1px solid #999;
+  font-size:26rpx;
+  border-radius:10rpx;
+  margin:20rpx;
+  margin-left:0;
+}
+.relay .flex {
+  padding:20rpx 0;
+}
+.relay .flex button{
+  flex: 1;
+  font-size:28rpx;
+}
+button::after {
+  border-radius: 0;
+}
+
+
+/* 客户 */
+.list{
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx 40rpx;
+  font-size: 28rpx;
+  color: #666;
+  background-color: #fff;
+  border-top:1px solid #f5f5f5;
+}
+.list-img image{
+  width:80rpx;
+  height: 80rpx;
+  align-self: center;
+}
+.list-user{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-left: 20rpx;
+}

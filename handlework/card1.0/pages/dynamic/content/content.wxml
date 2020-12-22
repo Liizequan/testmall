@@ -1,0 +1,30 @@
+<!--pages/dynamic/content/content.wxml-->
+<!-- <import src="../../../wxParse/wxParse.wxml"/> -->
+<view class='hearder'>
+  <!-- 头部 -->
+  <view class='top'>
+    <view class='hearder-title'>
+      <text>{{indexProduct.title}}</text>
+    </view>
+    <view class='hearder-comtime'>
+      <text>作者：{{indexProduct.author}}</text>
+      <text>{{time}}</text>
+    </view>
+  </view>
+  <!-- 文章内容 -->
+  <view class='rich'> 
+    <rich-text nodes="{{indexProduct.content}}"></rich-text> 
+  </view>
+  <!-- <view class='about'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view> -->
+
+  <!-- 结尾 -->
+  <view class='bettwen'>
+    <text>作者：{{indexProduct.author}}</text>
+    <view class='share' bindtap='share'>
+     <text>分享</text> 
+     <button  open-type='share'><image src='../../image/dynamic/share.png'></image></button>  
+    </view>
+  </view>
+</view>

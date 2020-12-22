@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="letter" wx:if="{{hotList.length>0}}">
+    热门城市
+  </view>
+  <view class="letSon">
+    <view wx:for="{{hotList}}" wx:key="index" class="item" bindtap="ok" data-res="{{item.name}}" data-id="{{item.id}}" data-lng="{{item.lng}}" data-lat="{{item.lat}}">
+      {{item.name}}
+    </view>
+  </view>
+  <view class="iteItem" wx:for="{{iteList}}" wx:key="index" wx:if="{{item.region.length>0}}">
+    <view class="letter">
+      {{item.name}}
+    </view>
+    <view class="letSon">
+      <view wx:for="{{item.region}}" wx:key="index" class="item" bindtap="ok" data-res="{{item.name}}" data-id="{{item.id}}" data-lng="{{item.lng}}" data-lat="{{item.lat}}">{{item.name}}</view>
+    </view>
+  </view>
+</view>

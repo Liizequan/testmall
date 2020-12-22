@@ -1,0 +1,108 @@
+<audio src="{{audiosrc}}" id="myAudio"></audio>
+<!-- <rich-text nodes="{{testnodes}}"></rich-text>
+<rich-text nodes="{{nodes}}"></rich-text> -->
+<scroll-view class="scrollcon" style="height:{{scrollHeight}}px;overflow:scroll;" scroll-y scroll-into-view="{{bottom}}">
+  <view wx:for="{{chatlist}}" wx:key="index" style="overflow:hidden;">
+    <view class="date" wx:if="{{index%10==0&&chatlist.length}}">
+      {{item.create_time}}
+    </view>
+    <view class="leftitem" wx:if="{{item.from!=fromId}}">
+      <view class="lefthead" style="background:url('{{item.head}}');background-size:cover;background-position:center;"></view>
+      <!-- <rich-text nodes="{{nodes}}" class="leftmsg"></rich-text> -->
+      <!-- <rich-text nodes="{{voice}}" class="leftmsg" wx:if="{{item.type=='voice'}}" bindtap="voicenow" data-voiceurl='{{item.message}}'></rich-text> -->
+      <view class="leftmsg" wx:if="{{item.type=='voice'}}" bindtap="voicenow" data-voiceurl='{{item.message}}'>
+        <image src="/speak/imgs/wavel.png" style="width:20rpx;height:30rpx;"></image>
+      </view>
+    <text class="leftmsg" wx:elif="{{item.type=='word'}}" selectable>{{item.message}}
+    </text>
+    <rich-text nodes="{{item.message}}" class="leftmsg" wx:else bindtap="getitem"></rich-text>
+  </view>
+  <view class="rightitem" wx:else>
+    <!-- <rich-text nodes="{{voice}}" class="rightmsg" wx:if="{{item.type=='voice'}}" bindtap="voicenow" data-voiceurl='{{item.message}}'></rich-text> -->
+    <view class="rightmsg" wx:if="{{item.type=='voice'}}" bindtap="voicenow" data-voiceurl='{{item.message}}'>
+      <image src="/speak/imgs/waver.png" style="width:20rpx;height:30rpx;"></image>
+    </view>
+    <text class="rightmsg" wx:elif="{{item.type=='word'}}" selectable>{{item.message}}
+    </text>
+    <rich-text nodes="{{item.message}}" class="rightmsg" wx:else bindtap="getitem" data-url="{{item.message}}"></rich-text>
+    <!-- <text wx:else decode='true'>{{item.message}}</text> -->
+    <!-- <rich-text type="text" nodes="{{item.message}}"></rich-text> -->
+    <view class="righthead" style="background:url('{{item.head}}');background-size:cover;background-position:center;"></view>
+  </view>
+  </view>
+  <view id="bottom"></view>
+</scroll-view>
+<view class="mask">
+  <view class="bottominput" wx:if="{{inputshow}}">
+    <!-- <view class="normal" catchtap="shownormal">常用语</view> -->
+    <image src="/speak/imgs/normal.png" catchtap="shownormal"></image>
+    <input placeholder="新消息" value="{{value}}" bindinput="inputing" confirm-type="send" bindconfirm="fasong" cursor-spacing="10" bindfocus="focusing" focus="{{beFocus}}"></input>
+    <image class="emotion" src="/speak/imgs/emotion.png" catchtap="showemotion"></image>
+    <image class="plus" src="/speak/imgs/plus.png" catchtap="showfuc"></image>
+  </view>
+  <!-- 加号功能 -->
+  <view class="function" wx:if="{{fucshow}}">
+    <view class="imgItem" catchtap="getphoto">
+      <image src="/speak/imgs/photo.png"></image>
+    </view>
+    <view class="imgItem" catchtap="getcamera">
+      <image src="/speak/imgs/camera.png"></image>
+    </view>
+    <view class="imgItem" catchtap="tospeak">
+      <image src="/speak/imgs/microphone.png"></image>
+    </view>
+  </view>
+  <!-- 常用语 -->
+  <view class="history" wx:if="{{huishishow}}">
+    <view style="height:360rpx;overflow-y:scroll;box-sizing:border-box;">
+      <view class="historyItem" catchtap="selectnormal" wx:for="{{normalList}}" wx:key="index" wx:if="{{normalList.length}}" data-info="{{item.info}}">
+        <view class="detail">{{item.info}}</view>
+        <!-- <view class="open">展开</view> -->
+      </view>
+    </view>
+    <view class="historyfunction">
+      <view class="jiba" catchtap="toaddnormal">
+        <image src="/speak/imgs/add1.png"></image>
+        添加
+      </view>
+      <view class="verticalline"></view>
+      <view class="jiba" catchtap="tomanage">
+        <image src="/speak/imgs/manage1.png"></image>
+        管理
+      </view>
+    </view>
+  </view>
+  <!-- 语音 -->
+  <view class="speaking" wx:if="{{caoshow}}">
+    <view style="position:relative;width:100%;">
+      <view class="currentsecond">
+        <image src="/speak/imgs/wave.png"></image>
+        <text>{{currentsecond}}"</text>
+      </view>
+      <progress percent="{{currentsecond}}" active stroke-width="34" duration="1" color="#ed2727" border-radius="17" active-mode="forwards" />
+      <!-- <view class="progress">
+        <view class="currentprogress" style="width:{{currentprogress}}rpx"></view>
+      </view> -->
+      <text class="cantotal">60s</text>
+    </view>
+    <view class="remark">请长按说话</view>
+    <view class="speakbtn {{touching?'touching':''}}">
+      <!-- -->
+      <!-- bindlongpress="speaking" -->
+      <view style="width:100%;height:100%;display: flex;justify-content: center;align-items: center;" bindtouchcancel="shutup" bindtouchend="shutup" bindlongtap="touch">
+        <image src="/speak/imgs/whitemicrophone.png"></image>
+      </view>
+      <view style="position:absolute;width:100%;height:100%;top:0;left:0;" wx:if="{{askshow}}" bindtap="askforrecord"></view>
+    </view>
+    <image class="closebtn" src="/speak/imgs/cha.png" catchtap="closespeak"></image>
+  </view>
+  <!-- 表情包 -->
+  <view class="emotioncon" wx:if="{{emotionshow}}">
+    <image wx:for="{{emotions}}" src="{{item.icon}}" wx:key="index" bindtap="selectemotion" data-emotion="{{item}}"></image>
+    <!-- <image wx:for="123456789" wx:key="index"></image> -->
+  </view>
+</view>
+<view class="closeall" bindtap="masktap" wx:if="{{fucshow||emotionshow||huishishow}}"></view>
+<view style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;z-index:999;" wx:if="{{viewMaskShow}}" bindtap="closeMask">
+  <image src="{{viewPicUrl}}" style="width:100%;" mode="widthFix"></image>
+</view>

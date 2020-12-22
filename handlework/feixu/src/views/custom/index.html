@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+<style>
+	.box{
+		width: 600px;
+		height: 500px;
+		background: pink;
+			margin: 0 auto;
+	}
+	.small{
+		margin: 0 auto;
+		width: 200px;
+		height: 200px;
+		background: red;
+	}
+</style>
+	<body>
+	
+	<div class="box">
+		<!--startprint-->
+		<div class="small">点击打印</div>
+		<!--endprint-->  
+		<button  onclick="myPrint(this)" >打印</button>
+	</div>	
+		
+		
+	</body>
+</html>
+<script>
+	
+	function myPrint(obj){
+              bdhtml = window.document.body.innerHTML;  
+			  
+        	  sprnstr = "<!--startprint-->";  
+        	  eprnstr = "<!--endprint-->";  
+        	  prnhtml = bdhtml.substr(bdhtml.indexOf(sprnstr) + 17);  
+        	  prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr));  
+        	  window.document.body.innerHTML = prnhtml;  
+        	  window.print();  
+        	  location.reload();  
+	}
+</script>

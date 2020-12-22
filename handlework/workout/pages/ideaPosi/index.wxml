@@ -1,0 +1,71 @@
+<view class="conBox" bindtap="toPosi">
+  <view class="container">
+    <view class="left">职位</view>
+    <view class="right">
+      <view>{{posi}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="toLocat">
+    <view class="left">工作地点</view>
+    <view class="right">
+      <view>{{location}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox">
+  <view class="container" bindtap="showDatePk">
+    <view class="left">期望薪资</view>
+    <view class="right">
+      <view>{{cash}}</view>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view class="conBox last">
+  <view class="container">
+    <view class="left">工作性质</view>
+    <view class="right">
+      <!-- <view>男</view> -->
+      <picker bindchange="sexChange" value="{{sex.index}}" range="{{sex.array}}" class="forTab">
+        <view class="picker">
+          {{sex.array[sex.index]}}
+        </view>
+      </picker>
+      <view class="rBtn"></view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{action == 'add'}}" bindtap="saveAll" class="saveAll">保存</view>
+<view class="btns" wx:if="{{action=='view'}}">
+  <view class="delBtn" bindtap="del">删除</view>
+  <view bindtap="saveAll" class="saveBtn">保存</view>
+</view>
+<view class="selfPicker" wx:if="{{pickShow}}" bindtap="showDatePk">
+  <view class="canclConf">
+    <text class="cancel" catchtap="cancel">取消</text>
+    <text class="confirm" catchtap="confirm">确定</text>
+  </view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 240px;text-align:center;background:#fff;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px" wx:key="index">{{item}}k</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px" wx:key="index">{{item}}k</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="phoneBox" wx:if="{{phShow}}" bindtap="closePhone">
+  <view class="phoneMain" catchtap="keep">
+    <view class="phTitle">职位</view>
+    <view class="inpBox">
+      <input placeholder="请输入职位" class="phInput" bindinput="inp" value="{{inpValue}}" cursor-spacing="100"></input>
+      <!-- <text class="rest">11/11</text> -->
+    </view>
+    <view class="save" bindtap="save">保存</view>
+    <text class="close" bindtap="closePhone">关闭</text>
+  </view>
+</view>

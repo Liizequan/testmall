@@ -1,0 +1,437 @@
+/*字体大小及颜色*/ 
+/* 字体为12px */
+.font12-bold-3{/*字体为14px 和 颜色#333 加粗 */
+  font-size: 0.75rem;
+  color:#303133;
+  font-weight: bold;
+}
+.font12-isbold-3{/*字体为14px 和 颜色#333 不加粗 */
+  font-size: 0.75rem;
+  color:#303133;
+  font-weight: 500;
+}
+.font12-nobold-3{/*字体为14px 和 颜色#333 不加粗 */
+  font-size: 0.75rem;
+  color:#303133;
+  font-weight: 400;
+}
+.font12-bold-6{/*字体为14px 和 颜色#666 加粗 */
+  font-size: 0.75rem;
+  color:#606266;
+  font-weight: bold;
+}
+.font12-isbold-6{/*字体为14px 和 颜色#666 不加粗 */
+  font-size: 0.75rem;
+  color:#606266;
+  font-weight: 500;
+}
+.font12-nobold-6{/*字体为14px 和 颜色#666 不加粗 */
+  font-size: 0.75rem;
+  color:#606266;
+  font-weight: 400;
+}
+.font12-bold-9{/*字体为14px 和 颜色#999 加粗 */
+  font-size: 0.75rem;
+  color:#909399;
+  font-weight: bold;
+}
+.font12-isbold-9{/*字体为14px 和 颜色#999 不加粗 */
+  font-size: 0.75rem;
+  color:#909399;
+  font-weight: 500;
+}
+.font12-nobold-9{/*字体为14px 和 颜色#999 不加粗 */
+  font-size: 0.75rem;
+  color:#909399;
+  font-weight: 400;
+}
+.font12-bold-f{/*字体为14px 和 颜色#fff 加粗 */
+  font-size: 0.75rem;
+  color:#fff;
+  font-weight: bold;
+}
+.font12-isbold-f{/*字体为14px 和 颜色#fff 不加粗 */
+  font-size: 0.75rem;
+  color:#fff;
+  font-weight: 500;
+}
+.font12-nobold-f{/*字体为14px 和 颜色#fff 不加粗 */
+  font-size: 0.75rem;
+  color:#fff;
+  font-weight: 400;
+}
+
+
+/* 字体为14px */
+.font14-bold-3{/*字体为14px 和 颜色#333 加粗 */
+  font-size: .875rem;
+  color:#303133;
+  font-weight: bold;
+}
+.font14-isbold-3{/*字体为14px 和 颜色#333 不加粗 */
+  font-size: .875rem;
+  color:#303133;
+  font-weight: 500;
+}
+.font14-nobold-3{/*字体为14px 和 颜色#333 不加粗 */
+  font-size: .875rem;
+  color:#303133;
+  font-weight: 400;
+}
+.font14-bold-6{/*字体为14px 和 颜色#666 加粗 */
+  font-size: .875rem;
+  color:#606266;
+  font-weight: bold;
+}
+.font14-isbold-6{/*字体为14px 和 颜色#666 不加粗 */
+  font-size: .875rem;
+  color:#606266;
+  font-weight: 500;
+}
+.font14-nobold-6{/*字体为14px 和 颜色#666 不加粗 */
+  font-size: .875rem;
+  color:#606266;
+  font-weight: 400;
+}
+.font14-bold-9{/*字体为14px 和 颜色#999 加粗 */
+  font-size: .875rem;
+  color:#909399;
+  font-weight: bold;
+}
+.font14-isbold-9{/*字体为14px 和 颜色#999 不加粗 */
+  font-size: .875rem;
+  color:#909399;
+  font-weight: 500;
+}
+.font14-nobold-9{/*字体为14px 和 颜色#999 不加粗 */
+  font-size: .875rem;
+  color:#909399;
+  font-weight: 400;
+}
+.font14-bold-f{/*字体为14px 和 颜色#fff 加粗 */
+  font-size: .875rem;
+  color:#fff;
+  font-weight: bold;
+}
+.font14-isbold-f{/*字体为14px 和 颜色#fff 不加粗 */
+  font-size: .875rem;
+  color:#fff;
+  font-weight: 500;
+}
+.font14-nobold-f{/*字体为14px 和 颜色#fff 不加粗 */
+  font-size: .875rem;
+  color:#fff;
+  font-weight: 400;
+}
+
+/* 字体为16px */
+  .font16-bold-3{/*16px 和 颜色#333 加粗 */
+    font-size: 1rem;
+    color:#303133;
+    font-weight: bold;
+  }
+  .font16-isbold-3{/*16px 和 颜色#333 不加粗 */
+    font-size: 1rem;
+    color:#303133;
+    font-weight: 500;
+  }
+  .font16-nobold-3{/*16px 和 颜色#333 不加粗 */
+    font-size: 1rem;
+    color:#303133;
+    font-weight: 400;
+  }
+  .font16-bold-6{/*字体为14px 和 颜色#666 加粗 */
+    font-size: 1rem;
+    color:#606266;
+    font-weight: bold;
+  }
+  .font16-nobold-6{/*字体为14px 和 颜色#666 不加粗 */
+    font-size: 1rem;
+    color:#606266;
+    font-weight: 400;
+  }
+  .font16-isbold-6{/*字体为14px 和 颜色#666 不加粗 */
+    font-size: 1rem;
+    color:#606266;
+    font-weight: 500;
+  }
+  .font16-bold-9{/*16px 和 颜色#999 加粗 */
+    font-size: 1rem;
+    color:#909399;
+    font-weight: bold;
+  }
+  .font16-isbold-9{/*16px 和 颜色#999 不加粗 */
+    font-size: 1rem;
+    color:#909399;
+    font-weight: 500;
+  }
+  .font16-nobold-9{/*16px 和 颜色#999 不加粗 */
+    font-size: 1rem;
+    color:#909399;
+    font-weight: 400;
+  }
+  .font16-bold-f{/*16px 和 颜色#fff 加粗 */
+    font-size: 1rem;
+    color:#fff;
+    font-weight: bold;
+  }
+  .font16-isbold-f{/*16px 和 颜色#fff 不加粗 */
+    font-size: 1rem;
+    color:#fff;
+    font-weight: 500;
+  }
+  .font16-nobold-f{/*16px 和 颜色#fff 不加粗 */
+    font-size: 1rem;
+    color:#fff;
+    font-weight: 400;
+  }
+
+/* 字体为18px */
+  .font18-bold-3{/*字体为18px 和 颜色#333 加粗 */
+    font-size: 1.125rem;
+    color:#303133;
+    font-weight: bold;
+  }
+  .font18-isbold-3{/*字体为18px 和 颜色#333 不加粗 */
+    font-size: 1.125rem;
+    color:#303133;
+    font-weight: 500;
+  }
+  .font18-nobold-3{/*字体为18px 和 颜色#333 不加粗 */
+    font-size: 1.125rem;
+    color:#303133;
+    font-weight: 400;
+  }
+  .font18-bold-6{/*字体为18px 和 颜色#666 加粗 */
+    font-size: 1.125rem;
+    color:#606266;
+    font-weight: bold;
+  }
+  .font18-isbold-6{/*字体为18px 和 颜色#666 不加粗 */
+    font-size: 1.125remm;
+    color:#606266;
+    font-weight: 500;
+  }
+  .font18-nobold-6{/*字体为18px 和 颜色#666 不加粗 */
+    font-size: 1.125remm;
+    color:#606266;
+    font-weight: 400;
+  }
+  .font18-bold-9{/*字体为18px 和 颜色#999 加粗 */
+    font-size: 1.125rem;
+    color:#909399;
+    font-weight: bold;
+  }
+  .font18-isbold-9{/*16px 和 颜色#999 不加粗 */
+    font-size: 1.125rem;
+    color:#909399;
+    font-weight: 500;
+  }
+  .font18-nobold-9{/*16px 和 颜色#999 不加粗 */
+    font-size: 1.125rem;
+    color:#909399;
+    font-weight: 400;
+  }
+  .font18-bold-f{/*字体为18px 和 颜色#fff 加粗 */
+    font-size: 1.125rem;
+    color:#fff;
+    font-weight: bold;
+  }
+  .font18-isbold-f{/*字体为18px 和 颜色#fff 不加粗 */
+    font-size: 1.125rem;
+    color:#fff;
+    font-weight: 500;
+  }
+  .font18-nobold-f{/*字体为18px 和 颜色#fff 不加粗 */
+    font-size: 1.125rem;
+    color:#fff;
+    font-weight: 400;
+  }
+
+/* 字体为20px */
+  .font20-bold-3{/*字体为20px 和 颜色#333 加粗 */
+    font-size: 1.25rem;
+    color:#303133;
+    font-weight: bold;
+  }
+  .font20-isbold-3{/*字体为20px 和 颜色#333 不加粗 */
+    font-size: 1.25rem;
+    color:#303133;
+    font-weight: 500;
+  }
+  .font20-nobold-3{/*字体为20px 和 颜色#333 不加粗 */
+    font-size: 1.25rem;
+    color:#303133;
+    font-weight: 400;
+  }
+  .font20-bold-6{/*字体为20px 和 颜色#666 加粗 */
+    font-size: 1.25rem;
+    color:#606266;
+    font-weight: bold;
+  }
+  .font20-isbold-6{/*字体为20px 和 颜色#666 不加粗 */
+    font-size: 1.25rem;
+    color:#606266;
+    font-weight: 500;
+  }
+  .font20-nobold-6{/*字体为20px 和 颜色#666 不加粗 */
+    font-size: 1.25rem;
+    color:#606266;
+    font-weight: 400;
+  }
+  .font20-bold-9{/*字体为20px 和 颜色#999 加粗 */
+    font-size: 1.25rem;
+    color:#909399;
+    font-weight: bold;
+  }
+  .font20-isbold-9{/*字体为20px 和 颜色#999 加粗 */
+    font-size: 1.25rem;
+    color:#909399;
+    font-weight: 500;
+  }
+  .font20-nobold-9{/*字体为20px 和 颜色#999 不加粗 */
+    font-size: 1.25rem;
+    color:#909399;
+    font-weight: 400;
+  }
+  .font20-bold-f{/*字体为20px 和 颜色#fff 加粗 */
+    font-size: 1.25rem;
+    color:#fff;
+    font-weight: bold;
+  }
+  .font20-isbold-f{/*字体为20px 和 颜色#fff 加粗 */
+    font-size: 1.25rem;
+    color:#fff;
+    font-weight: 500;
+  }
+  .font20-nobold-f{/*字体为20px 和 颜色#fff 不加粗 */
+    font-size: 1.25rem;
+    color:#fff;
+    font-weight: 400;
+  }
+
+/* 字体为24px */
+  .font24-bold-3{/*字体为24px 和 颜色#333 加粗 */
+    font-size: 1.5rem;
+    color:#303133;
+    font-weight: bold;
+  }
+  .font24-isbold-3{/*字体为24px 和 颜色#333 加粗 */
+    font-size: 1.5rem;
+    color:#303133;
+    font-weight: 500;
+  }
+  .font24-nobold-3{/*字体为24px 和 颜色#333 不加粗 */
+    font-size: 1.5rem;
+    color:#303133;
+    font-weight: 400;
+  }
+  .font24-bold-6{/*字体为24px 和 颜色#666 加粗 */
+    font-size: 1.5rem;
+    color:#606266;
+    font-weight: bold;
+  }
+  .font24-isbold-6{/*字体为24px 和 颜色#666 加粗 */
+    font-size: 1.5rem;
+    color:#606266;
+    font-weight: 500;
+  }
+  .font24-nobold-6{/*字体为24px 和 颜色#666 不加粗 */
+    font-size: 1.5rem;
+    color:#606266;
+    font-weight: 400;
+  }
+  .font24-bold-9{/*字体为24px 和 颜色#999 加粗 */
+    font-size: 1.5rem;
+    color:#909399;
+    font-weight: bold;
+  }
+  .font24-isbold-9{/*字体为24px 和 颜色#999 加粗 */
+    font-size: 1.5rem;
+    color:#909399;
+    font-weight: 500;
+  }
+  .font24-nobold-9{/*字体为24px 和 颜色#999 不加粗 */
+    font-size: 1.5rem;
+    color:#909399;
+    font-weight: 400;
+  }
+  .font24-bold-f{/*字体为24px 和 颜色#fff 加粗 */
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: bold;
+  }
+  .font24-isbold-f{/*字体为24px 和 颜色#fff 加粗 */
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: 500;
+  }
+  .font24-nobold-f{/*字体为24px 和 颜色#fff 不加粗 */
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: 400;
+  }
+
+
+  /* 字体为36px */
+  .font36-bold-3{/*字体为24px 和 颜色#333 加粗 */
+    font-size:2.25rem;
+    color:#303133;
+    font-weight: bold;
+  }
+  .font36-isbold-3{/*字体为24px 和 颜色#333 加粗 */
+    font-size:2.25rem;
+    color:#303133;
+    font-weight: 500;
+  }
+  .font36-nobold-3{/*字体为24px 和 颜色#333 不加粗 */
+    font-size:2.25rem;
+    color:#303133;
+    font-weight: 400;
+  }
+  .font36-bold-6{/*字体为24px 和 颜色#666 加粗 */
+    font-size:2.25rem;
+    color:#606266;
+    font-weight: bold;
+  }
+  .font36-isbold-6{/*字体为24px 和 颜色#666 加粗 */
+    font-size: 2.25rem;
+    color:#606266;
+    font-weight: 500;
+  }
+  .font36-nobold-6{/*字体为24px 和 颜色#666 不加粗 */
+    font-size:2.25rem;
+    color:#606266;
+    font-weight: 400;
+  }
+  .font36-bold-9{/*字体为24px 和 颜色#999 加粗 */
+    font-size: 2.25rem;
+    color:#909399;
+    font-weight: bold;
+  }
+  .font36-isbold-9{/*字体为24px 和 颜色#999 加粗 */
+    font-size:2.25rem;
+    color:#909399;
+    font-weight: 500;
+  }
+  .font36-nobold-9{/*字体为24px 和 颜色#999 不加粗 */
+    font-size:2.25rem;
+    color:#909399;
+    font-weight: 400;
+  }
+  .font36-bold-f{/*字体为24px 和 颜色#fff 加粗 */
+    font-size:2.25rem;
+    color:#fff;
+    font-weight: bold;
+  }
+  .font36-isbold-f{/*字体为24px 和 颜色#fff 加粗 */
+    font-size:2.25rem;
+    color:#fff;
+    font-weight: 500;
+  }
+  .font36-nobold-f{/*字体为24px 和 颜色#fff 不加粗 */
+    font-size:2.25rem;
+    color:#fff;
+    font-weight: 400;
+  }
+  

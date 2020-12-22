@@ -1,0 +1,40 @@
+/* pages/login/login.wxss */
+.header {
+    margin: 160rpx auto 20rpx;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.content {
+    margin-bottom: 90rpx;
+    text-align: center;
+}
+
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+/* 升级 */
+.promote{
+  position: absolute;
+  color: #666;
+  font-size: 45rpx;
+  top:40%;
+  left: 50%;
+  transform: translate(-40%,-50%);
+}
+/* 原文：https://blog.csdn.net/woqianduo/article/details/81395257  */

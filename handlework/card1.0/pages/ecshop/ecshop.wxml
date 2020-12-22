@@ -1,0 +1,96 @@
+<!--pages/ecshop/ecshop.wxml-->
+<view class='ecshop'>
+  <view class='banner'>
+    <swiper previous-margin="41rpx" next-margin="41rpx" >
+      <swiper-item data-index="1" catchtouchmove="stopTouchMove"> <image src='{{banner}}'></image> </swiper-item>
+    </swiper>
+  </view>
+  <!-- 精选推荐 -->
+  <view class='fine'>
+    <view class='fine-container'>
+      <view class='news-title'>
+        <view>精选推荐</view>
+      </view> 
+      <block wx:for="{{fineData}}" wx:key="index">
+        <view class='fine-user' data-index="{{index}}" bindtap='orderTap' data-name="0">
+          <view class='user-name'>
+            <view>
+              {{item.name}}
+              <text>推荐</text>
+              <text>{{item.mode_label}}</text>
+            </view>
+            <view> <image src='../image/mine/right.png'></image> </view>
+          </view>
+          <view class='user-info'>
+            <view class='info-list'>
+              {{item.qixian}}
+              <view>{{item.term}}{{item.m}}</view>
+            </view>
+            <view class='info-list'>
+              {{item.lixi}}
+              <view>{{item.mode}}</view>
+            </view>
+            <view class='info-list'>
+              {{item.qitou}}
+              <view>{{item.t}}{{item.amount}}{{item.qi}}</view>
+            </view>
+            <view class='info-list'>
+           {{item.lilv}}
+              <view class='red'>{{item.interest}}{{item.b}}</view>
+            </view>
+          </view>
+          <view class='fint-line'>
+            <progress percent='{{(item.quota)/1000*100}}' border-radius='10' stroke-width='3' color='red'></progress>
+          </view>
+          <view class='fint-surplus'>
+            <text>{{item.edu}}</text> <text>{{item.quota}}{{item.w}}</text> 
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 全部产品 -->
+  <view class='all-fine fine'>
+    <view class='fine-container'>
+      <view class='news-title'>
+        <view>全部产品</view>
+      </view> 
+      <block wx:for="{{productList}}" wx:key="index">
+        <view class='fine-user' bindtap='orderTap' data-name="1" data-index="{{index}}">
+          <view class='user-name'>
+            <view>
+              {{item.name}}
+              <text>推荐</text>
+              <text>{{item.mode_label}}</text>
+            </view>
+            <view> <image src='../image/mine/right.png'></image> </view>
+          </view>
+          <view class='user-info'>
+            <view class='info-list'>
+              {{item.qixian}}
+              <view>{{item.term}}{{item.m}}</view>
+            </view>
+            <view class='info-list'>
+             {{item.lixi}}
+              <view>{{item.mode}}</view>
+            </view>
+            <view class='info-list'>
+              {{item.qitou}}
+              <view>{{item.t}}{{item.amount}}{{item.qi}}</view>
+            </view>
+            <view class='info-list'>
+              {{item.lilv}}
+              <view class='red'>{{item.interest}}{{item.b}}%</view>
+            </view>
+          </view>
+          <view class='fint-line'>
+            <progress percent='{{(item.quota)/1000*100}}' border-radius='10' stroke-width='3' color='red'></progress>
+          </view>
+          <view class='fint-surplus'>
+            <text>{{item.edu}}</text> <text>{{item.quota}}{{item.w}}</text> 
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

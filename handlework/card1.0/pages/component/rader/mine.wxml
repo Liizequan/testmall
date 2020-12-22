@@ -1,0 +1,52 @@
+<!--pages/component/rader/mine.wxml-->
+<view>
+  <!-- 名片区域信息 -->
+  <view class='mine'>
+    <view class='card'>
+      <view class='card-top'>
+        <view class='card-logo'><image src='{{host+(userCard.imgurl)}}'></image></view>
+        <view class='card-name'>
+          <text class='name'>{{userCard.name}}</text>
+          <text class='position'>{{userCard.station}}</text>
+        </view>
+        <view class='card-edit'>
+          <view class='card-edit-yes' bindtap='editInfo'>
+            <image src='../../image/edit.png'></image>
+            <text> 编辑</text>
+          </view>
+          <view>
+            <image mode='widthFix' src='../../image/index/right.png' class='img-right'></image>
+          </view>
+        </view>
+      </view>
+      <view class='card-bottom'>
+        <text>我的推广码</text>
+        <image src='../../image/promo.png' mode='widthFix' bindtap='showKuang'></image>
+      </view>
+      <!-- 推广码logo -->
+      <view class='kuang' bindtap='hideKuang' wx:if="{{kuang}}">
+        <image src='{{host+userCard.card}}' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class='transverse'>
+      <view wx:for="{{logoImg}}" wx:key="index">
+        <view class='logo-img'><image src='{{item.img}}' mode='widthFix'></image></view>
+        <text>{{item.text}}</text>
+      </view>
+    </view>  
+  </view>
+  <!-- 竖列关于我的信息 -->
+  <view class='about-mine'>
+    <!-- 名片 -->
+    <navigator url='/pages/card/lookcard/index?licaishi={{userCard.id}}' class='list' hover-class='none'>
+      <text>名片预览</text>
+      <view><image class='logo-right' src='../../image/index/right.png' mode='widthFix'></image></view>
+    </navigator>
+
+    <!-- 发送记录 -->
+    <navigator url='/pages/card/sendrever/index' class='list' hover-class='none'>
+      <text>发送记录</text>
+      <view><image class='logo-right' src='../../image/index/right.png' mode='widthFix'></image></view>
+    </navigator>
+  </view>
+</view>

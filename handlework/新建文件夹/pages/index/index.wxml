@@ -1,0 +1,17 @@
+<view class="container b-f">
+  <!-- DIY组件 -->
+  <diy-component changeShow="{{changeShow}}" btn="{{ btn }}"  h="{{ h }}"  m="{{ m }}"  s="{{ s }}"  skell="{{ skell }}"  diyItems="{{ items }}"></diy-component>
+</view>
+  <!-- 快捷导航 -->
+<view class="shortcut" bindtap="showPhone">
+    <button class="nav-item nav-item__switch btn-normal">
+      <!-- <text class='iconfont icon-profile'></text> -->
+    </button>
+    <image src="/images/kefu1.png"></image>
+</view> 
+<!-- <view class="shortcut chat">
+    <button open-type="contact" class="nav-item nav-item__switch btn-normal" style="display: flex;justify-content: center;align-items: center;">
+      <image src="/images/contact.png" class="contactImg"></image>
+    </button>
+</view> -->
+<service maskShow="{{maskShow}}" phone="{{phone}}"></service>

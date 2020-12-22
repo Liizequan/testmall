@@ -1,0 +1,21 @@
+<view class="search">
+  <view class="condition">
+    <image src="/assets/icon/search1.png" mode="widthFix"></image>
+    <input placeholder="输入关键字" placeholder-class="searchPH" value="{{condit}}" bindconfirm='search' bindinput="inp" bindfocus="inpFocus" bindblur="inpBlur"></input>
+  </view>
+</view>
+<view wx:if="{{hasResult}}">
+  <selTab region="{{region}}" id="sel" list="{{iteList}}"></selTab>
+  <view style="{{'height:'+scrollH+'px;overflow:scroll;'}}">
+    <view>
+      <item wx:for="{{iteList}}" wx:key="{{item}}" bindtap="toPosiDetl" positions="{{item}}" data-id="{{item.id}}"></item>
+    </view>
+    <view class="bottom" wx:if="{{iteList.length>2}}">到底了...</view>
+  </view>
+</view>
+<view class="container" wx:else>
+  <view class="hot" wx:if="{{list.length>0}}">热门搜索</view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index" bindtap="toSearch" data-item="{{item}}">{{item}}</view>
+  </view>
+</view>

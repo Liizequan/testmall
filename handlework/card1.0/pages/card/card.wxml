@@ -1,0 +1,84 @@
+<!--pages/card/card.wxml-->
+<movable-area style="height: 99vh; width: 99%;" wx-if="{{asFinancial}}">
+  <movable-view class='add-user-logo'  x="{{width}}" y="{{height}}" direction="all">
+    <view bindtap='addCard'><image src='../image/card/addUser.png' mode='widthFix'></image></view>
+  </movable-view>
+</movable-area>
+
+<scroll-view class='scroll' scroll-y='true'>
+  <view class='card'>
+    <view class='card-user'>
+      <view class='card-bg'><image src='../image/card/bg.png'></image></view>
+      <view class='card-text'>
+        <view class='user-share'>
+
+             <!-- 分享 -->
+          <button open-type='share'>
+            <image src='../image/card/share1.png'></image>
+          </button>
+
+
+           <!-- 雷达按钮 -->
+          <button bindtap="look" wx-if="{{asFinancial}}" style='padding-left:0;'>
+            <image src='../image/card/look1.png'></image>
+          </button>
+          
+
+        </view>
+        <view class='user-logo'>
+          <view><image src='{{userLogo}}'></image></view>
+          <text>{{useUserCardData.name}}</text>
+        </view>
+        <view class='user-glory'>
+          <view> 
+            <text>{{useUserCardData.professional}}</text> 
+            <text>{{useUserCardData.professional2}}</text>
+          </view>
+          <view> 
+            <text>{{useUserCardData.professional3}}</text>  
+            <text>{{useUserCardData.professional4}}</text> 
+          </view>
+        </view>
+      </view>
+      <!-- 联系方式 -->
+      <view class='touch'>
+        <view>
+          <view>电话：<text>{{useUserCardData.tel}}</text> </view>
+          <text class='red' bindtap='callPhone'>拨打</text>
+        </view>
+        <view>
+          <view>邮箱：<text>{{useUserCardData.email}}</text> </view>
+          <text class='red' bindtap='copyEmail'>复制</text>
+        </view>
+      </view> 
+    </view>
+    <view class='card-CV'>
+      <view class='cv-header'><text>个性签名</text></view>
+      <view class='cv-title'>
+        <view style="-webkit-line-clamp:{{!signClamp?'2':'none'}}">
+          <text  decode='true' space='nbsp'>{{useUserCardData.signature}}</text>
+        </view>
+        <view bindtap='gezhangkai' class='zhangkai' wx:if="{{!signNumber}}">
+          <text wx:if="{{!signClamp}}">展开</text>
+          <text wx:else>收回</text>
+        </view>
+      </view>
+    </view>
+    <view class='card-CV'>
+      <view class='cv-header'><text>个人简介</text></view>
+      <view class='cv-title'>
+        <view style="-webkit-line-clamp:{{!clamp?'2':'none'}}">
+          <text  decode='true' style='font-size:30rpx;' space='nbsp'>{{useUserCardData.introduce}}</text>
+        </view>
+        <view bindtap='zhangkai'  class='zhangkai' wx:if="{{!number}}">
+          <text wx:if="{{!clamp}}">展开</text>
+          <text wx:else>收回</text>
+        </view>
+      </view>
+      <view class='cv-btn'>
+        <button type='warn' plain='true' size='mini' open-type='share'>分享名片</button>
+        <button type='warn' size='mini' bindtap='callPhone'>联系我</button>
+      </view>
+    </view>
+  </view>
+</scroll-view>

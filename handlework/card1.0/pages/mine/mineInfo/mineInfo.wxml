@@ -1,0 +1,58 @@
+<!--pages/mine/mineInfo/mineInfo.wxml-->
+<view class='mineInfo'>
+  <view class='bettwen'>
+    <text>姓名</text>
+    <input name="name" bindinput='nameInput' placeholder='请输入您的姓名' value='{{name}}'></input>
+  </view>
+  <view class='around'>
+    <!-- 性别 -->
+    <radio-group class="radio-group">
+      <label bindtap='gender' data-index='1'>
+        <radio checked='{{gender==1 ? true : fasle}}'/>先生
+      </label>
+      <label bindtap='gender' data-index='2'>
+        <radio checked='{{gender==2 ? true : false}}'/>女士
+      </label>
+    </radio-group>
+    <!-- 联系电话 -->
+    <view class='bettwen'>
+      <text>联系电话</text>
+      <!-- <text>{{phone}}</text> -->
+      <input name="phone" bindinput='phoneInput' placeholder='请输入您的电话' value='{{phone}}'></input>
+    </view>
+    <!-- 投资倾向 -->
+    <view>
+      <view class='bettwen' bindtap='impactTap'>
+        <text>投资倾向</text>
+        <view class='{{impactActive?"":"active"}}'>
+          <text>{{impact.name}}</text>
+          <image src='../../image/mine/bottom.png'></image>
+        </view>
+      </view>
+      <view class='column' wx:if="{{impactActive}}">
+        <block wx:for="{{impactList}}" wx:key="index">
+          <text bindtap='impactListTap' data-index="{{index}}">{{item.name}}</text>
+        </block>
+      </view>
+    </view>
+    <!-- 风险偏好 -->
+    <view>
+      <view class='bettwen' bindtap='hazardTap'>
+        <text>风险偏好</text>
+        <view class='{{hazardActive?"":"active"}}'>
+          <text>{{hazard.name}}</text>
+          <image src='../../image/mine/bottom.png'></image>
+        </view>
+      </view>
+      <view class='column' wx:if="{{hazardActive}}">
+        <block wx:for="{{hazardList}}" wx:key="index">
+          <text bindtap='hazardListTap' data-index="{{index}}">{{item.name}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class='btns' bindtap='submit'>
+    <button type='warn'>保存</button>
+  </view>
+</view>
